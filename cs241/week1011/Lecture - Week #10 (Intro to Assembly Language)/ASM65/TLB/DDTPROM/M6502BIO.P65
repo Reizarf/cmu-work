@@ -1,0 +1,166 @@
+;               M6502BIO - M6502 EMULATOR BIOS ROUTINES
+;
+;       COPYRIGHT 2020 BY WAYNE WALL.
+;
+;UNLESS INDICATED OTHERWISE, BIOS ROUTINES PRESERVE THE AC, X and Y REGISTERS
+;AND RETURN WITH THE CARRY BIT = 0 on SUCCESS and = 1 ON FAILURE.  THE BIOS
+;ROUTINES ARE ALLOWED TO USE THE TOP 16 BYTES OF PAGE ZERO.  THESE ROUTINES
+;ARE NOT REENTRANT!
+;
+;CONSOLE INPUT:
+;
+;READING FROM SIMULATED KEYBOARD INPUT ADDRESS $EC00 WILL RETURN A ZERO
+;IF NO KEY IS AVAILABLE AND THE ASCII CHAR CODE FOR THE KEY IF ONE IS
+;AVAILABLE.
+;
+;CONSOLE OUTPUT:
+;
+;WRITING TO OUTPUT ADDRESS $EC01 WILL DISPLAY THE ASCII CHAR ON THE CONSOLE
+;WITH NO SPECIAL PROCESSING.
+
+        .PAGE
+        
+        .LOC $00F0      ;TOP 16 BYTES OF PAGE 0.
+        
+ACSAVE: .BYTE 0         ;PLACE TO SAVE AC CONTENTS
+XSAVE:  .BYTE 0         ;PLACE TO SAVE X CONTENTS
+YSAVE:  .BYTE 0         ;PLACE TO SAVE Y CONTENTS
+
+BINVAL: .BYTE 0         ;HOLDS 8-BIT BINARY VALUE
+BCDVAL: .WORD 0         ;HOLDS FOUR BCD DIGITS
+        
+        .LOC BIOLOC
+        
+        ;UTILITY ROUTINES
+        
+        ;SAVE AC, X, Y REGISTERS
+        
+BIOSAV: STA     ACSAVE
+        STX     XSAVE
+        STY     YSAVE
+        RTS
+       
+       ;RESTORE AC, X, Y REGISTERS
+        
+BIORES: LDA     ACSAVE
+BIORXY: LDX     XSAVE
+        LDY     YSAVE
+        RTS
+
+        ;*** M6502 EMULATOR KEYBOARD INPUT ROUTINES ***
+        
+        .DEF    KEYADDR = $EC00     ;SIMULATED ADDRESS OF KEYBOARD INPUT
+        
+KEYINI: CLC                         ;NOTHING TO DO.  RETURN SUCCESS.
+        RTS
+        
+KEYCHK: LDA     KEYADDR             ;IS KEY AVAILABLE?
+        BNE     GOTKEY              ;BRANCH IF YES.
+        SEC                         ;NO, INDICATE NONE AVAILABLE
+        RTS
+GOTKEY: AND#    $7F                 ;YES, KEEP 7-BIT ASCII
+        CLC                         ;INDICATE SUCCESS AND RETURN
+        RTS
+        
+KEYINP: JSR     KEYCHK              ;IS KEY AVAILABLE?
+        BCS     KEYINP              ;BRANCH IF NOT, KEEP CHECKING
+        RTS                         ;RETURN SUCCESS WITH CHAR IN THE AC
+
+        ;*** M6502 EMULATOR CONSOLE OUTPUT ROUTINES ***
+        
+        .DEF    CONOADR = $EC01     ;SIMULATED ADDRESS OF CONSOLE OUTPUT
+
+        .DEF    TVESC = $1B         ;"ESC" CHAR CODE
+        
+TVOINI:                             ;* PFALL * CLEAR SCREEN AND RETURN        
+TVOCLR: PHA                         ;PRESERVE AC
+        JSR     TVOVTE              ;SEND VT100 ESCAPE SEQUENCE
+        LDA#    'H                  ;TO HOME AND ERASE SCREEN
+        JSR     TVOCHR
+        JSR     TVOVTE
+        LDA#    'J
+        JSR     TVOCHR
+        PLA                         ;RESTORE AC
+        CLC                         ;INDICATE SUCCESS
+        RTS        
+        
+        ;POSITION CURSOR ON SCREEN
+        ;AC = ROW NUMBER (0,1,2,...)
+        ;X  = COLUMN NUMBER (0,1,2,...)
+        ;
+        ;SENDS VT100 ESCAPE SEQUENCE "ESC[ROW;COLH".
+        ;ROW AND COL ARE ONE-BASED (1,2,3,...).
+        
+TVOCUR: JSR     BIOSAV              ;PRESERVE REGISTERS
+        JSR     TVOVTE              ;OUTPUT START OF VT100 ESCAPE SEQUENCE
+        LDX     ACSAVE              ;VT100 ROW IS ONE-BASED (1,2,3,...)
+        INX
+        TXA
+        JSR     TVNUMO              ;ROW NUMBER
+        LDA#    ';
+        JSR     TVOCHR
+        LDX     XSAVE               ;VT100 COLUMN IS ONE-BASED (1,2,3,...)
+        INX
+        TXA
+        JSR     TVNUMO              ;COLUMN NUMBER
+        LDA#    'H
+        JSR     TVOCHR
+        JMP     BIORES              ;* PJMP * RESTORE REGISTERS AND RETURN
+ 
+        ;TAKES 8-BIT BINARY VALUE (0 - 255) PASSED IN THE AC AND OUTPUTS
+        ;ITS ASCII REPRESENTATION TO THE CONSOLE.  MAINLY USED FOR CURSOR
+        ;ADDRESSING ESCAPE SEQUENCES.
+        
+TVNUMO: JSR     TVBCD               ;CONVERT BINARY TO THREE BCD DIGITS
+        LDA     BCDVAL+1            ;OUTPUT LEFTMOST BCD DIGIT
+        JSR     TVODIG
+        LDA     BCDVAL              ;OUTPUT MIDDLE BCD DIGIT
+        AND#    $F0                 ;ISOLATE HIGH ORDER NYBBLE
+        CLC
+        RORA
+        RORA
+        RORA
+        RORA
+        JSR     TVODIG
+        LDA     BCDVAL              ;OUTPUT RIGHTMOST BCD DIGIT
+        AND#    $0F
+        JMP     TVODIG              ;* PJMP * AND RETURN        
+        
+        ;TAKES 8-BIT BINARY VALUE (0 - 255) PASSED IN THE AC
+        ;AND CONVERTS IT TO THREE BCD DIGITS.
+        
+TVBCD:  STA     BINVAL              ;SAVE 8-BIT VALUE
+        TXA                         ;PRESERVE X REGISTER
+        PHA
+        LDA#    0                   ;ZERO BCD DIGITS
+        STA     BCDVAL
+        STA     BCDVAL+1
+        SED                         ;SET BCD ARITHMETIC MODE
+        LDX#    8                   ;BITS TO EXAMINE/SHIFT
+TVBCDL: ASL     BINVAL              ;SHIFT BINARY BIT INTO CARRY
+        LDA     BCDVAL              ;ADD BCD VALUE TO ITSELF + CARRY
+        ADC     BCDVAL
+        STA     BCDVAL
+        LDA     BCDVAL+1
+        ADC     BCDVAL+1
+        STA     BCDVAL+1
+        DEX                         ;DONE WITH ALL BITS?
+        BNE     TVBCDL              ;BRANCH IF NOT
+        CLD                         ;CLEAR BCD ARITHMETIC MODE
+        PLA                         ;RESTORE X REGISTER
+        TAX
+        RTS
+        
+        ;OUTPUT START OF VT100 ESCAPE SEQUENCE
+        
+TVOVTE: LDA#    TVESC
+        JSR     TVOCHR
+        LDA#    '[
+        BNE     TVOCHR              ;* PBNE * OUTPUT AND RETURN
+        
+TVODIG: ORA#    '0                  ;FORM ASCII CODE FOR DIGIT 0-9
+TVOCHR: STA     CONOADR             ;OUTPUT CHARACTER TO SIMULATED CONSOLE
+        CLC                         ;INDICATE SUCCESS AND RETURN
+        RTS
+         
+        .END

@@ -1,0 +1,96 @@
+;
+; Author: Wayne Wall
+; Description: Program to display several messages on the console.
+;
+
+  ;Define some ASCII character codes
+  
+  .DEF  CR = $0D              ;Carriage return
+  .DEF  LF = $0A              ;Line feed
+  .DEF  CTRLC = $03           ;Ctrl-C
+  .DEF  CTRLR = $12           ;Ctrl-R
+  
+  ;Program start address
+  
+  .DEF  STADDR = $0200
+  
+  .LOC  STADDR
+  
+PROG:   SEI                   ;Disable interrupts
+        CLD                   ;Clear decimal mode
+        LDX#    $FF           ;Init stack pointer
+        TXS
+        JSR     CONINI        ;Initialize console input
+        JSR     CONINO        ;Initialize console output
+        LDX#    >TEXT1        ;High-order address of first text message.
+        LDA#    <TEXT1        ;Low-order address of first text message.
+        JSR     COUTTX        ;Display text message on console.
+        LDX#    >TEXT2        ;High-order address of second text message.
+        LDA#    <TEXT2        ;Low-order address of second text message.
+        JSR     COUTTX        ;Display text message on console.
+ECHO:   JSR     CONINP        ;Get character from console
+        CMP#    CTRLR         ;Ctrl-R?
+        BEQ     PROG          ;If yes, restart program.
+        CMP#    CTRLC         ;Exit program and return to ROM debugger?
+        BEQ     JDEBUG        ;Branch if yes
+        JSR     CONOUT        ;Echo character back to console       
+        CMP#    CR            ;Was character a carriage return?
+        BNE     ECHO          ;Branch if not.
+        LDA#    LF            ;Yes, follow with a line feed.
+        JSR     CONOUT
+        BCC     ECHO          ;Loop back
+JDEBUG: BRK                   ;Break out and enter ROM debugger. 
+
+        .PAGE
+
+        ;Remember where we were placing program instructions in memory.
+
+        .DEF  PRGLOC1 = .
+
+        ;Specify a couple page zero locations for COUTTX routine to use.
+
+        .LOC  $00E0
+
+TXTADR: .WORD   0               ;Holds low-order, high-order addr of text bytes.
+
+        ;Return to placing program instructions in memory.
+
+        .LOC  PRGLOC1
+
+        ;Subroutine to display a zero-byte terminated text message on the console.
+        ;Enter with high-order address of text in the X register and the low-order
+        ;address in the AC.  This routine uses the AC, X and Y registers.
+
+COUTTX: STA     TXTADR          ;Store low order address of where text resides.
+        STX     TXTADR+1        ;Store high order address of where text resides.
+        LDY#    0               ;Start at text char offset of zero (i.e. first char).
+COUTTL: LDA@Y   TXTADR          ;Fetch text byte at base address, offset by Y.
+        BEQ     COUTRT          ;Branch if reached zero-byte at end of text message.
+        JSR     CONOUT          ;Disply character on the console.
+        INY                     ;Increment offset to point to next text character
+        BNE     COUTTL          ;Branch back to output next character.
+COUTRT: RTS                     ;Return to caller.
+
+        ;Arbitrarily place the text messages somewhere else in memory.
+
+        .LOC  $0800
+
+        ; Zero-byte terminated message text.
+        ; (Must be less than 256 total characters.)
+
+TEXT1:  .ASCII  'Hello 6502 World!'
+        .BYTE   CR
+        .BYTE   LF 
+        .BYTE   0
+
+TEXT2:  .ASCII  'Do unto others as you would have them do unto you.'
+        .BYTE   CR
+        .BYTE   LF
+        .ASCII  "Don't judge someone until you've walked a mile in their shoes."
+        .BYTE   CR
+        .BYTE   LF 
+        .BYTE   0               
+      
+        .LINK   BIODEF          ;Include BIOS entry point definitions.
+      
+        .END

@@ -1,0 +1,3353 @@
+
+Press an option.
+inline
+the line is empty
+clockcounter: 0
+
+the line is empty
+clockcounter: 1
+
+the line is empty
+clockcounter: 2
+
+the line is empty
+clockcounter: 3
+
+the line is empty
+clockcounter: 4
+
+the line is empty
+clockcounter: 5
+
+the line is empty
+clockcounter: 6
+
+the line is empty
+clockcounter: 7
+
+the line is empty
+clockcounter: 8
+
+the line is empty
+clockcounter: 9
+
+the line is empty
+clockcounter: 10
+
+the line is empty
+clockcounter: 11
+
+the line is empty
+clockcounter: 12
+
+the line is empty
+clockcounter: 13
+
+the line is empty
+clockcounter: 14
+
+the line is empty
+clockcounter: 15
+customer #: 2has arrived now. 
+clockcounter: 15
+
+15 : Customer #1is currently being served.
+clockcounter: 16
+
+16 : Customer #1is currently being served.
+clockcounter: 17
+
+17 : Customer #1is currently being served.
+clockcounter: 18
+
+18 : Customer #1is currently being served.
+clockcounter: 19
+
+19 : Customer #1is currently being served.
+clockcounter: 20
+
+20 : Customer #1is currently being served.
+clockcounter: 21
+
+21 : Customer #1is currently being served.
+clockcounter: 22
+
+22 : Customer #1is currently being served.
+clockcounter: 23
+
+23 : Customer #1is currently being served.
+clockcounter: 24
+
+24 : Customer #1is currently being served.
+clockcounter: 25
+
+25 : Customer #1is currently being served.
+clockcounter: 26
+
+26 : Customer #1is currently being served.
+clockcounter: 27
+
+27 : Customer #1is currently being served.
+clockcounter: 28
+
+28 : Customer #1is currently being served.
+clockcounter: 29
+
+29 : Customer #1is currently being served.
+clockcounter: 30
+
+30 : Customer #1is currently being served.
+clockcounter: 31
+
+31 : Customer #1is currently being served.
+clockcounter: 32
+
+32 : Customer #1is currently being served.
+clockcounter: 33
+
+33 : Customer #1is currently being served.
+clockcounter: 34
+
+34 : Customer #1is currently being served.
+clockcounter: 35
+
+35 : Customer #1is currently being served.
+clockcounter: 36
+
+36 : Customer #1is currently being served.
+clockcounter: 37
+
+37 : Customer #1is currently being served.
+clockcounter: 38
+
+38 : Customer #1is currently being served.
+clockcounter: 39
+
+39 : Customer #1is currently being served.
+clockcounter: 40
+
+40 : Customer #1is currently being served.
+clockcounter: 41
+
+41 : Customer #1is currently being served.
+clockcounter: 42
+
+42 : Customer #1is currently being served.
+clockcounter: 43
+
+43 : Customer #1is currently being served.
+clockcounter: 44
+test
+customer #: 1is leaving  the line 
+
+clockcounter: 45
+
+clockcounter: 46
+
+clockcounter: 47
+
+clockcounter: 48
+
+clockcounter: 49
+
+clockcounter: 50
+
+clockcounter: 51
+
+clockcounter: 52
+
+clockcounter: 53
+
+clockcounter: 54
+
+clockcounter: 55
+
+clockcounter: 56
+
+clockcounter: 57
+
+clockcounter: 58
+
+clockcounter: 59
+
+clockcounter: 60
+
+clockcounter: 61
+
+clockcounter: 62
+
+clockcounter: 63
+
+clockcounter: 64
+
+clockcounter: 65
+
+clockcounter: 66
+
+clockcounter: 67
+
+clockcounter: 68
+
+clockcounter: 69
+
+clockcounter: 70
+
+clockcounter: 71
+
+clockcounter: 72
+
+clockcounter: 73
+
+clockcounter: 74
+
+clockcounter: 75
+
+clockcounter: 76
+
+clockcounter: 77
+
+clockcounter: 78
+
+clockcounter: 79
+
+clockcounter: 80
+
+clockcounter: 81
+
+clockcounter: 82
+
+clockcounter: 83
+
+clockcounter: 84
+
+clockcounter: 85
+
+clockcounter: 86
+
+clockcounter: 87
+
+clockcounter: 88
+
+clockcounter: 89
+
+clockcounter: 90
+
+clockcounter: 91
+
+clockcounter: 92
+customer #: 3has arrived now. 
+clockcounter: 92
+
+92 : Customer #2is currently being served.
+clockcounter: 93
+
+93 : Customer #2is currently being served.
+clockcounter: 94
+
+94 : Customer #2is currently being served.
+clockcounter: 95
+
+95 : Customer #2is currently being served.
+clockcounter: 96
+
+96 : Customer #2is currently being served.
+clockcounter: 97
+
+97 : Customer #2is currently being served.
+clockcounter: 98
+
+98 : Customer #2is currently being served.
+clockcounter: 99
+
+99 : Customer #2is currently being served.
+clockcounter: 100
+
+100 : Customer #2is currently being served.
+clockcounter: 101
+
+101 : Customer #2is currently being served.
+clockcounter: 102
+
+102 : Customer #2is currently being served.
+clockcounter: 103
+
+103 : Customer #2is currently being served.
+clockcounter: 104
+
+104 : Customer #2is currently being served.
+clockcounter: 105
+
+105 : Customer #2is currently being served.
+clockcounter: 106
+
+106 : Customer #2is currently being served.
+clockcounter: 107
+
+107 : Customer #2is currently being served.
+clockcounter: 108
+
+108 : Customer #2is currently being served.
+clockcounter: 109
+
+109 : Customer #2is currently being served.
+clockcounter: 110
+
+110 : Customer #2is currently being served.
+clockcounter: 111
+
+111 : Customer #2is currently being served.
+clockcounter: 112
+
+112 : Customer #2is currently being served.
+clockcounter: 113
+
+113 : Customer #2is currently being served.
+clockcounter: 114
+
+114 : Customer #2is currently being served.
+clockcounter: 115
+
+115 : Customer #2is currently being served.
+clockcounter: 116
+
+116 : Customer #2is currently being served.
+clockcounter: 117
+
+117 : Customer #2is currently being served.
+clockcounter: 118
+
+118 : Customer #2is currently being served.
+clockcounter: 119
+
+119 : Customer #2is currently being served.
+clockcounter: 120
+
+120 : Customer #2is currently being served.
+clockcounter: 121
+test
+customer #: 2is leaving  the line 
+
+clockcounter: 122
+
+clockcounter: 123
+
+clockcounter: 124
+
+clockcounter: 125
+
+clockcounter: 126
+
+clockcounter: 127
+customer #: 4has arrived now. 
+clockcounter: 127
+
+127 : Customer #3is currently being served.
+clockcounter: 128
+
+128 : Customer #3is currently being served.
+clockcounter: 129
+
+129 : Customer #3is currently being served.
+clockcounter: 130
+
+130 : Customer #3is currently being served.
+clockcounter: 131
+
+131 : Customer #3is currently being served.
+clockcounter: 132
+
+132 : Customer #3is currently being served.
+clockcounter: 133
+
+133 : Customer #3is currently being served.
+clockcounter: 134
+
+134 : Customer #3is currently being served.
+clockcounter: 135
+
+135 : Customer #3is currently being served.
+clockcounter: 136
+
+136 : Customer #3is currently being served.
+clockcounter: 137
+
+137 : Customer #3is currently being served.
+clockcounter: 138
+
+138 : Customer #3is currently being served.
+clockcounter: 139
+
+139 : Customer #3is currently being served.
+clockcounter: 140
+
+140 : Customer #3is currently being served.
+clockcounter: 141
+
+141 : Customer #3is currently being served.
+clockcounter: 142
+
+142 : Customer #3is currently being served.
+clockcounter: 143
+
+143 : Customer #3is currently being served.
+clockcounter: 144
+
+144 : Customer #3is currently being served.
+clockcounter: 145
+
+145 : Customer #3is currently being served.
+clockcounter: 146
+
+146 : Customer #3is currently being served.
+clockcounter: 147
+
+147 : Customer #3is currently being served.
+clockcounter: 148
+
+148 : Customer #3is currently being served.
+clockcounter: 149
+
+149 : Customer #3is currently being served.
+clockcounter: 150
+
+150 : Customer #3is currently being served.
+clockcounter: 151
+
+151 : Customer #3is currently being served.
+clockcounter: 152
+
+152 : Customer #3is currently being served.
+clockcounter: 153
+
+153 : Customer #3is currently being served.
+clockcounter: 154
+
+154 : Customer #3is currently being served.
+clockcounter: 155
+
+155 : Customer #3is currently being served.
+clockcounter: 156
+test
+customer #: 3is leaving  the line 
+
+clockcounter: 157
+
+clockcounter: 158
+
+clockcounter: 159
+
+clockcounter: 160
+
+clockcounter: 161
+
+clockcounter: 162
+
+clockcounter: 163
+
+clockcounter: 164
+
+clockcounter: 165
+
+clockcounter: 166
+
+clockcounter: 167
+
+clockcounter: 168
+
+clockcounter: 169
+
+clockcounter: 170
+
+clockcounter: 171
+
+clockcounter: 172
+
+clockcounter: 173
+customer #: 5has arrived now. 
+clockcounter: 173
+
+173 : Customer #4is currently being served.
+clockcounter: 174
+
+174 : Customer #4is currently being served.
+clockcounter: 175
+
+175 : Customer #4is currently being served.
+clockcounter: 176
+
+176 : Customer #4is currently being served.
+clockcounter: 177
+
+177 : Customer #4is currently being served.
+clockcounter: 178
+
+178 : Customer #4is currently being served.
+clockcounter: 179
+
+179 : Customer #4is currently being served.
+clockcounter: 180
+
+180 : Customer #4is currently being served.
+clockcounter: 181
+
+181 : Customer #4is currently being served.
+clockcounter: 182
+
+182 : Customer #4is currently being served.
+clockcounter: 183
+
+183 : Customer #4is currently being served.
+clockcounter: 184
+
+184 : Customer #4is currently being served.
+clockcounter: 185
+
+185 : Customer #4is currently being served.
+clockcounter: 186
+
+186 : Customer #4is currently being served.
+clockcounter: 187
+
+187 : Customer #4is currently being served.
+clockcounter: 188
+
+188 : Customer #4is currently being served.
+clockcounter: 189
+
+189 : Customer #4is currently being served.
+clockcounter: 190
+
+190 : Customer #4is currently being served.
+clockcounter: 191
+
+191 : Customer #4is currently being served.
+clockcounter: 192
+
+192 : Customer #4is currently being served.
+clockcounter: 193
+
+193 : Customer #4is currently being served.
+clockcounter: 194
+
+194 : Customer #4is currently being served.
+clockcounter: 195
+
+195 : Customer #4is currently being served.
+clockcounter: 196
+
+196 : Customer #4is currently being served.
+clockcounter: 197
+
+197 : Customer #4is currently being served.
+clockcounter: 198
+
+198 : Customer #4is currently being served.
+clockcounter: 199
+
+199 : Customer #4is currently being served.
+clockcounter: 200
+
+200 : Customer #4is currently being served.
+clockcounter: 201
+
+201 : Customer #4is currently being served.
+clockcounter: 202
+test
+customer #: 4is leaving  the line 
+
+clockcounter: 203
+
+clockcounter: 204
+
+clockcounter: 205
+
+clockcounter: 206
+
+clockcounter: 207
+
+clockcounter: 208
+
+clockcounter: 209
+
+clockcounter: 210
+
+clockcounter: 211
+
+clockcounter: 212
+
+clockcounter: 213
+
+clockcounter: 214
+
+clockcounter: 215
+
+clockcounter: 216
+
+clockcounter: 217
+
+clockcounter: 218
+
+clockcounter: 219
+
+clockcounter: 220
+
+clockcounter: 221
+
+clockcounter: 222
+
+clockcounter: 223
+
+clockcounter: 224
+
+clockcounter: 225
+
+clockcounter: 226
+
+clockcounter: 227
+
+clockcounter: 228
+
+clockcounter: 229
+
+clockcounter: 230
+
+clockcounter: 231
+
+clockcounter: 232
+
+clockcounter: 233
+
+clockcounter: 234
+
+clockcounter: 235
+
+clockcounter: 236
+
+clockcounter: 237
+
+clockcounter: 238
+
+clockcounter: 239
+
+clockcounter: 240
+
+clockcounter: 241
+
+clockcounter: 242
+
+clockcounter: 243
+
+clockcounter: 244
+
+clockcounter: 245
+
+clockcounter: 246
+
+clockcounter: 247
+
+clockcounter: 248
+
+clockcounter: 249
+
+clockcounter: 250
+
+clockcounter: 251
+
+clockcounter: 252
+
+clockcounter: 253
+
+clockcounter: 254
+
+clockcounter: 255
+
+clockcounter: 256
+
+clockcounter: 257
+
+clockcounter: 258
+
+clockcounter: 259
+
+clockcounter: 260
+
+clockcounter: 261
+
+clockcounter: 262
+
+clockcounter: 263
+
+clockcounter: 264
+
+clockcounter: 265
+
+clockcounter: 266
+
+clockcounter: 267
+
+clockcounter: 268
+
+clockcounter: 269
+
+clockcounter: 270
+
+clockcounter: 271
+
+clockcounter: 272
+
+clockcounter: 273
+
+clockcounter: 274
+
+clockcounter: 275
+
+clockcounter: 276
+
+clockcounter: 277
+
+clockcounter: 278
+
+clockcounter: 279
+
+clockcounter: 280
+
+clockcounter: 281
+
+clockcounter: 282
+
+clockcounter: 283
+
+clockcounter: 284
+
+clockcounter: 285
+
+clockcounter: 286
+
+clockcounter: 287
+
+clockcounter: 288
+
+clockcounter: 289
+
+clockcounter: 290
+
+clockcounter: 291
+
+clockcounter: 292
+
+clockcounter: 293
+
+clockcounter: 294
+
+clockcounter: 295
+
+clockcounter: 296
+
+clockcounter: 297
+
+clockcounter: 298
+
+clockcounter: 299
+
+clockcounter: 300
+
+clockcounter: 301
+
+clockcounter: 302
+
+clockcounter: 303
+
+clockcounter: 304
+
+clockcounter: 305
+
+clockcounter: 306
+
+clockcounter: 307
+
+clockcounter: 308
+
+clockcounter: 309
+
+clockcounter: 310
+
+clockcounter: 311
+
+clockcounter: 312
+
+clockcounter: 313
+
+clockcounter: 314
+
+clockcounter: 315
+
+clockcounter: 316
+
+clockcounter: 317
+
+clockcounter: 318
+
+clockcounter: 319
+
+clockcounter: 320
+
+clockcounter: 321
+
+clockcounter: 322
+
+clockcounter: 323
+
+clockcounter: 324
+
+clockcounter: 325
+
+clockcounter: 326
+
+clockcounter: 327
+
+clockcounter: 328
+
+clockcounter: 329
+
+clockcounter: 330
+
+clockcounter: 331
+
+clockcounter: 332
+
+clockcounter: 333
+
+clockcounter: 334
+
+clockcounter: 335
+
+clockcounter: 336
+
+clockcounter: 337
+
+clockcounter: 338
+
+clockcounter: 339
+
+clockcounter: 340
+
+clockcounter: 341
+
+clockcounter: 342
+
+clockcounter: 343
+
+clockcounter: 344
+
+clockcounter: 345
+
+clockcounter: 346
+
+clockcounter: 347
+
+clockcounter: 348
+
+clockcounter: 349
+
+clockcounter: 350
+
+clockcounter: 351
+
+clockcounter: 352
+
+clockcounter: 353
+
+clockcounter: 354
+
+clockcounter: 355
+
+clockcounter: 356
+
+clockcounter: 357
+
+clockcounter: 358
+
+clockcounter: 359
+
+clockcounter: 360
+
+clockcounter: 361
+
+clockcounter: 362
+
+clockcounter: 363
+
+clockcounter: 364
+
+clockcounter: 365
+
+clockcounter: 366
+
+clockcounter: 367
+
+clockcounter: 368
+
+clockcounter: 369
+
+clockcounter: 370
+
+clockcounter: 371
+
+clockcounter: 372
+
+clockcounter: 373
+
+clockcounter: 374
+
+clockcounter: 375
+
+clockcounter: 376
+
+clockcounter: 377
+
+clockcounter: 378
+
+clockcounter: 379
+
+clockcounter: 380
+
+clockcounter: 381
+
+clockcounter: 382
+
+clockcounter: 383
+
+clockcounter: 384
+
+clockcounter: 385
+
+clockcounter: 386
+
+clockcounter: 387
+
+clockcounter: 388
+
+clockcounter: 389
+
+clockcounter: 390
+
+clockcounter: 391
+
+clockcounter: 392
+
+clockcounter: 393
+
+clockcounter: 394
+
+clockcounter: 395
+
+clockcounter: 396
+
+clockcounter: 397
+
+clockcounter: 398
+
+clockcounter: 399
+
+clockcounter: 400
+
+clockcounter: 401
+
+clockcounter: 402
+
+clockcounter: 403
+
+clockcounter: 404
+
+clockcounter: 405
+
+clockcounter: 406
+
+clockcounter: 407
+
+clockcounter: 408
+
+clockcounter: 409
+
+clockcounter: 410
+
+clockcounter: 411
+
+clockcounter: 412
+
+clockcounter: 413
+
+clockcounter: 414
+
+clockcounter: 415
+
+clockcounter: 416
+
+clockcounter: 417
+
+clockcounter: 418
+
+clockcounter: 419
+
+clockcounter: 420
+
+clockcounter: 421
+
+clockcounter: 422
+
+clockcounter: 423
+
+clockcounter: 424
+
+clockcounter: 425
+
+clockcounter: 426
+
+clockcounter: 427
+
+clockcounter: 428
+
+clockcounter: 429
+
+clockcounter: 430
+
+clockcounter: 431
+
+clockcounter: 432
+
+clockcounter: 433
+
+clockcounter: 434
+
+clockcounter: 435
+
+clockcounter: 436
+
+clockcounter: 437
+
+clockcounter: 438
+
+clockcounter: 439
+
+clockcounter: 440
+
+clockcounter: 441
+
+clockcounter: 442
+
+clockcounter: 443
+
+clockcounter: 444
+
+clockcounter: 445
+
+clockcounter: 446
+
+clockcounter: 447
+
+clockcounter: 448
+
+clockcounter: 449
+
+clockcounter: 450
+
+clockcounter: 451
+
+clockcounter: 452
+
+clockcounter: 453
+
+clockcounter: 454
+
+clockcounter: 455
+
+clockcounter: 456
+
+clockcounter: 457
+
+clockcounter: 458
+
+clockcounter: 459
+
+clockcounter: 460
+
+clockcounter: 461
+
+clockcounter: 462
+
+clockcounter: 463
+
+clockcounter: 464
+
+clockcounter: 465
+
+clockcounter: 466
+
+clockcounter: 467
+
+clockcounter: 468
+
+clockcounter: 469
+
+clockcounter: 470
+
+clockcounter: 471
+
+clockcounter: 472
+
+clockcounter: 473
+
+clockcounter: 474
+
+clockcounter: 475
+
+clockcounter: 476
+
+clockcounter: 477
+
+clockcounter: 478
+
+clockcounter: 479
+
+clockcounter: 480
+
+clockcounter: 481
+
+clockcounter: 482
+
+clockcounter: 483
+
+clockcounter: 484
+
+clockcounter: 485
+
+clockcounter: 486
+
+clockcounter: 487
+
+clockcounter: 488
+
+clockcounter: 489
+
+clockcounter: 490
+
+clockcounter: 491
+
+clockcounter: 492
+
+clockcounter: 493
+
+clockcounter: 494
+
+clockcounter: 495
+
+clockcounter: 496
+
+clockcounter: 497
+
+clockcounter: 498
+
+clockcounter: 499
+
+clockcounter: 500
+
+clockcounter: 501
+
+clockcounter: 502
+
+clockcounter: 503
+
+clockcounter: 504
+
+clockcounter: 505
+
+clockcounter: 506
+
+clockcounter: 507
+
+clockcounter: 508
+
+clockcounter: 509
+
+clockcounter: 510
+
+clockcounter: 511
+
+clockcounter: 512
+
+clockcounter: 513
+
+clockcounter: 514
+
+clockcounter: 515
+
+clockcounter: 516
+
+clockcounter: 517
+
+clockcounter: 518
+
+clockcounter: 519
+
+clockcounter: 520
+
+clockcounter: 521
+
+clockcounter: 522
+
+clockcounter: 523
+
+clockcounter: 524
+
+clockcounter: 525
+
+clockcounter: 526
+
+clockcounter: 527
+
+clockcounter: 528
+
+clockcounter: 529
+
+clockcounter: 530
+
+clockcounter: 531
+
+clockcounter: 532
+
+clockcounter: 533
+
+clockcounter: 534
+
+clockcounter: 535
+
+clockcounter: 536
+
+clockcounter: 537
+
+clockcounter: 538
+
+clockcounter: 539
+
+clockcounter: 540
+
+clockcounter: 541
+
+clockcounter: 542
+
+clockcounter: 543
+
+clockcounter: 544
+
+clockcounter: 545
+
+clockcounter: 546
+
+clockcounter: 547
+
+clockcounter: 548
+
+clockcounter: 549
+
+clockcounter: 550
+
+clockcounter: 551
+
+clockcounter: 552
+
+clockcounter: 553
+
+clockcounter: 554
+
+clockcounter: 555
+
+clockcounter: 556
+
+clockcounter: 557
+
+clockcounter: 558
+
+clockcounter: 559
+
+clockcounter: 560
+
+clockcounter: 561
+
+clockcounter: 562
+
+clockcounter: 563
+
+clockcounter: 564
+
+clockcounter: 565
+
+clockcounter: 566
+
+clockcounter: 567
+
+clockcounter: 568
+
+clockcounter: 569
+
+clockcounter: 570
+
+clockcounter: 571
+
+clockcounter: 572
+
+clockcounter: 573
+
+clockcounter: 574
+
+clockcounter: 575
+
+clockcounter: 576
+
+clockcounter: 577
+
+clockcounter: 578
+
+clockcounter: 579
+
+clockcounter: 580
+
+clockcounter: 581
+
+clockcounter: 582
+
+clockcounter: 583
+
+clockcounter: 584
+
+clockcounter: 585
+
+clockcounter: 586
+
+clockcounter: 587
+
+clockcounter: 588
+
+clockcounter: 589
+
+clockcounter: 590
+
+clockcounter: 591
+
+clockcounter: 592
+
+clockcounter: 593
+
+clockcounter: 594
+
+clockcounter: 595
+
+clockcounter: 596
+
+clockcounter: 597
+
+clockcounter: 598
+
+clockcounter: 599
+
+clockcounter: 600
+
+clockcounter: 601
+
+clockcounter: 602
+
+clockcounter: 603
+
+clockcounter: 604
+
+clockcounter: 605
+
+clockcounter: 606
+
+clockcounter: 607
+
+clockcounter: 608
+
+clockcounter: 609
+
+clockcounter: 610
+
+clockcounter: 611
+
+clockcounter: 612
+
+clockcounter: 613
+
+clockcounter: 614
+
+clockcounter: 615
+
+clockcounter: 616
+
+clockcounter: 617
+
+clockcounter: 618
+
+clockcounter: 619
+
+clockcounter: 620
+
+clockcounter: 621
+
+clockcounter: 622
+
+clockcounter: 623
+
+clockcounter: 624
+
+clockcounter: 625
+
+clockcounter: 626
+
+clockcounter: 627
+
+clockcounter: 628
+
+clockcounter: 629
+
+clockcounter: 630
+
+clockcounter: 631
+
+clockcounter: 632
+
+clockcounter: 633
+
+clockcounter: 634
+
+clockcounter: 635
+
+clockcounter: 636
+
+clockcounter: 637
+
+clockcounter: 638
+
+clockcounter: 639
+
+clockcounter: 640
+
+clockcounter: 641
+
+clockcounter: 642
+
+clockcounter: 643
+
+clockcounter: 644
+
+clockcounter: 645
+
+clockcounter: 646
+
+clockcounter: 647
+
+clockcounter: 648
+
+clockcounter: 649
+
+clockcounter: 650
+
+clockcounter: 651
+
+clockcounter: 652
+
+clockcounter: 653
+
+clockcounter: 654
+
+clockcounter: 655
+
+clockcounter: 656
+
+clockcounter: 657
+
+clockcounter: 658
+
+clockcounter: 659
+
+clockcounter: 660
+
+clockcounter: 661
+
+clockcounter: 662
+
+clockcounter: 663
+
+clockcounter: 664
+
+clockcounter: 665
+
+clockcounter: 666
+
+clockcounter: 667
+
+clockcounter: 668
+
+clockcounter: 669
+
+clockcounter: 670
+
+clockcounter: 671
+
+clockcounter: 672
+
+clockcounter: 673
+
+clockcounter: 674
+
+clockcounter: 675
+
+clockcounter: 676
+
+clockcounter: 677
+
+clockcounter: 678
+
+clockcounter: 679
+
+clockcounter: 680
+
+clockcounter: 681
+
+clockcounter: 682
+
+clockcounter: 683
+
+clockcounter: 684
+
+clockcounter: 685
+
+clockcounter: 686
+
+clockcounter: 687
+
+clockcounter: 688
+
+clockcounter: 689
+
+clockcounter: 690
+
+clockcounter: 691
+
+clockcounter: 692
+
+clockcounter: 693
+
+clockcounter: 694
+
+clockcounter: 695
+
+clockcounter: 696
+
+clockcounter: 697
+
+clockcounter: 698
+
+clockcounter: 699
+
+clockcounter: 700
+
+clockcounter: 701
+
+clockcounter: 702
+
+clockcounter: 703
+
+clockcounter: 704
+
+clockcounter: 705
+
+clockcounter: 706
+
+clockcounter: 707
+
+clockcounter: 708
+
+clockcounter: 709
+
+clockcounter: 710
+
+clockcounter: 711
+
+clockcounter: 712
+
+clockcounter: 713
+
+clockcounter: 714
+
+clockcounter: 715
+
+clockcounter: 716
+
+clockcounter: 717
+
+clockcounter: 718
+
+clockcounter: 719
+
+clockcounter: 720
+
+clockcounter: 721
+
+clockcounter: 722
+
+clockcounter: 723
+
+clockcounter: 724
+
+clockcounter: 725
+
+clockcounter: 726
+
+clockcounter: 727
+
+clockcounter: 728
+
+clockcounter: 729
+
+clockcounter: 730
+
+clockcounter: 731
+
+clockcounter: 732
+
+clockcounter: 733
+
+clockcounter: 734
+
+clockcounter: 735
+
+clockcounter: 736
+
+clockcounter: 737
+
+clockcounter: 738
+
+clockcounter: 739
+
+clockcounter: 740
+
+clockcounter: 741
+
+clockcounter: 742
+
+clockcounter: 743
+
+clockcounter: 744
+
+clockcounter: 745
+
+clockcounter: 746
+
+clockcounter: 747
+
+clockcounter: 748
+
+clockcounter: 749
+
+clockcounter: 750
+
+clockcounter: 751
+
+clockcounter: 752
+
+clockcounter: 753
+
+clockcounter: 754
+
+clockcounter: 755
+
+clockcounter: 756
+
+clockcounter: 757
+
+clockcounter: 758
+
+clockcounter: 759
+
+clockcounter: 760
+
+clockcounter: 761
+
+clockcounter: 762
+
+clockcounter: 763
+
+clockcounter: 764
+
+clockcounter: 765
+
+clockcounter: 766
+
+clockcounter: 767
+
+clockcounter: 768
+
+clockcounter: 769
+
+clockcounter: 770
+
+clockcounter: 771
+
+clockcounter: 772
+
+clockcounter: 773
+
+clockcounter: 774
+
+clockcounter: 775
+
+clockcounter: 776
+
+clockcounter: 777
+
+clockcounter: 778
+
+clockcounter: 779
+
+clockcounter: 780
+
+clockcounter: 781
+
+clockcounter: 782
+
+clockcounter: 783
+
+clockcounter: 784
+
+clockcounter: 785
+
+clockcounter: 786
+
+clockcounter: 787
+
+clockcounter: 788
+
+clockcounter: 789
+
+clockcounter: 790
+
+clockcounter: 791
+
+clockcounter: 792
+
+clockcounter: 793
+
+clockcounter: 794
+
+clockcounter: 795
+
+clockcounter: 796
+
+clockcounter: 797
+
+clockcounter: 798
+
+clockcounter: 799
+
+clockcounter: 800
+
+clockcounter: 801
+
+clockcounter: 802
+
+clockcounter: 803
+
+clockcounter: 804
+
+clockcounter: 805
+
+clockcounter: 806
+
+clockcounter: 807
+
+clockcounter: 808
+
+clockcounter: 809
+
+clockcounter: 810
+
+clockcounter: 811
+
+clockcounter: 812
+
+clockcounter: 813
+
+clockcounter: 814
+
+clockcounter: 815
+
+clockcounter: 816
+
+clockcounter: 817
+
+clockcounter: 818
+
+clockcounter: 819
+
+clockcounter: 820
+
+clockcounter: 821
+
+clockcounter: 822
+
+clockcounter: 823
+
+clockcounter: 824
+
+clockcounter: 825
+
+clockcounter: 826
+
+clockcounter: 827
+
+clockcounter: 828
+
+clockcounter: 829
+
+clockcounter: 830
+
+clockcounter: 831
+
+clockcounter: 832
+
+clockcounter: 833
+
+clockcounter: 834
+
+clockcounter: 835
+
+clockcounter: 836
+
+clockcounter: 837
+
+clockcounter: 838
+
+clockcounter: 839
+
+clockcounter: 840
+
+clockcounter: 841
+
+clockcounter: 842
+
+clockcounter: 843
+
+clockcounter: 844
+
+clockcounter: 845
+
+clockcounter: 846
+
+clockcounter: 847
+
+clockcounter: 848
+
+clockcounter: 849
+
+clockcounter: 850
+
+clockcounter: 851
+
+clockcounter: 852
+
+clockcounter: 853
+
+clockcounter: 854
+
+clockcounter: 855
+
+clockcounter: 856
+
+clockcounter: 857
+
+clockcounter: 858
+
+clockcounter: 859
+
+clockcounter: 860
+
+clockcounter: 861
+
+clockcounter: 862
+
+clockcounter: 863
+
+clockcounter: 864
+
+clockcounter: 865
+
+clockcounter: 866
+
+clockcounter: 867
+
+clockcounter: 868
+
+clockcounter: 869
+
+clockcounter: 870
+
+clockcounter: 871
+
+clockcounter: 872
+
+clockcounter: 873
+
+clockcounter: 874
+
+clockcounter: 875
+
+clockcounter: 876
+
+clockcounter: 877
+
+clockcounter: 878
+
+clockcounter: 879
+
+clockcounter: 880
+
+clockcounter: 881
+
+clockcounter: 882
+
+clockcounter: 883
+
+clockcounter: 884
+
+clockcounter: 885
+
+clockcounter: 886
+
+clockcounter: 887
+
+clockcounter: 888
+
+clockcounter: 889
+
+clockcounter: 890
+
+clockcounter: 891
+
+clockcounter: 892
+
+clockcounter: 893
+
+clockcounter: 894
+
+clockcounter: 895
+
+clockcounter: 896
+
+clockcounter: 897
+
+clockcounter: 898
+
+clockcounter: 899
+
+clockcounter: 900
+
+clockcounter: 901
+
+clockcounter: 902
+
+clockcounter: 903
+
+clockcounter: 904
+
+clockcounter: 905
+
+clockcounter: 906
+
+clockcounter: 907
+
+clockcounter: 908
+
+clockcounter: 909
+
+clockcounter: 910
+
+clockcounter: 911
+
+clockcounter: 912
+
+clockcounter: 913
+
+clockcounter: 914
+
+clockcounter: 915
+
+clockcounter: 916
+
+clockcounter: 917
+
+clockcounter: 918
+
+clockcounter: 919
+
+clockcounter: 920
+
+clockcounter: 921
+
+clockcounter: 922
+
+clockcounter: 923
+
+clockcounter: 924
+
+clockcounter: 925
+
+clockcounter: 926
+
+clockcounter: 927
+
+clockcounter: 928
+
+clockcounter: 929
+
+clockcounter: 930
+
+clockcounter: 931
+
+clockcounter: 932
+
+clockcounter: 933
+
+clockcounter: 934
+
+clockcounter: 935
+
+clockcounter: 936
+
+clockcounter: 937
+
+clockcounter: 938
+
+clockcounter: 939
+
+clockcounter: 940
+
+clockcounter: 941
+
+clockcounter: 942
+
+clockcounter: 943
+
+clockcounter: 944
+
+clockcounter: 945
+
+clockcounter: 946
+
+clockcounter: 947
+
+clockcounter: 948
+
+clockcounter: 949
+
+clockcounter: 950
+
+clockcounter: 951
+
+clockcounter: 952
+
+clockcounter: 953
+
+clockcounter: 954
+
+clockcounter: 955
+
+clockcounter: 956
+
+clockcounter: 957
+
+clockcounter: 958
+
+clockcounter: 959
+
+clockcounter: 960
+
+clockcounter: 961
+
+clockcounter: 962
+
+clockcounter: 963
+
+clockcounter: 964
+
+clockcounter: 965
+
+clockcounter: 966
+
+clockcounter: 967
+
+clockcounter: 968
+
+clockcounter: 969
+
+clockcounter: 970
+
+clockcounter: 971
+
+clockcounter: 972
+
+clockcounter: 973
+
+clockcounter: 974
+
+clockcounter: 975
+
+clockcounter: 976
+
+clockcounter: 977
+
+clockcounter: 978
+
+clockcounter: 979
+
+clockcounter: 980
+
+clockcounter: 981
+
+clockcounter: 982
+
+clockcounter: 983
+
+clockcounter: 984
+
+clockcounter: 985
+
+clockcounter: 986
+
+clockcounter: 987
+
+clockcounter: 988
+
+clockcounter: 989
+
+clockcounter: 990
+
+clockcounter: 991
+
+clockcounter: 992
+
+clockcounter: 993
+
+clockcounter: 994
+
+clockcounter: 995
+
+clockcounter: 996
+
+clockcounter: 997
+
+clockcounter: 998
+
+clockcounter: 999
+
+clockcounter: 1000
+
+clockcounter: 1001
+
+clockcounter: 1002
+
+clockcounter: 1003
+
+clockcounter: 1004
+
+clockcounter: 1005
+
+clockcounter: 1006
+
+clockcounter: 1007
+
+clockcounter: 1008
+
+clockcounter: 1009
+
+clockcounter: 1010
+
+clockcounter: 1011
+
+clockcounter: 1012
+
+clockcounter: 1013
+
+clockcounter: 1014
+
+clockcounter: 1015
+
+clockcounter: 1016
+
+clockcounter: 1017
+
+clockcounter: 1018
+
+clockcounter: 1019
+
+clockcounter: 1020
+
+clockcounter: 1021
+
+clockcounter: 1022
+
+clockcounter: 1023
+
+clockcounter: 1024
+
+clockcounter: 1025
+
+clockcounter: 1026
+
+clockcounter: 1027
+
+clockcounter: 1028
+
+clockcounter: 1029
+
+clockcounter: 1030
+
+clockcounter: 1031
+
+clockcounter: 1032
+
+clockcounter: 1033
+
+clockcounter: 1034
+
+clockcounter: 1035
+
+clockcounter: 1036
+
+clockcounter: 1037
+
+clockcounter: 1038
+
+clockcounter: 1039
+
+clockcounter: 1040
+
+clockcounter: 1041
+
+clockcounter: 1042
+
+clockcounter: 1043
+
+clockcounter: 1044
+
+clockcounter: 1045
+
+clockcounter: 1046
+
+clockcounter: 1047
+
+clockcounter: 1048
+
+clockcounter: 1049
+
+clockcounter: 1050
+
+clockcounter: 1051
+
+clockcounter: 1052
+
+clockcounter: 1053
+
+clockcounter: 1054
+
+clockcounter: 1055
+
+clockcounter: 1056
+
+clockcounter: 1057
+
+clockcounter: 1058
+
+clockcounter: 1059
+
+clockcounter: 1060
+
+clockcounter: 1061
+
+clockcounter: 1062
+
+clockcounter: 1063
+
+clockcounter: 1064
+
+clockcounter: 1065
+
+clockcounter: 1066
+
+clockcounter: 1067
+
+clockcounter: 1068
+
+clockcounter: 1069
+
+clockcounter: 1070
+
+clockcounter: 1071
+
+clockcounter: 1072
+
+clockcounter: 1073
+
+clockcounter: 1074
+
+clockcounter: 1075
+
+clockcounter: 1076
+
+clockcounter: 1077
+
+clockcounter: 1078
+
+clockcounter: 1079
+
+clockcounter: 1080
+
+clockcounter: 1081
+
+clockcounter: 1082
+
+clockcounter: 1083
+
+clockcounter: 1084
+
+clockcounter: 1085
+
+clockcounter: 1086
+
+clockcounter: 1087
+
+clockcounter: 1088
+
+clockcounter: 1089
+
+clockcounter: 1090
+
+clockcounter: 1091
+
+clockcounter: 1092
+
+clockcounter: 1093
+
+clockcounter: 1094
+
+clockcounter: 1095
+
+clockcounter: 1096
+
+clockcounter: 1097
+
+clockcounter: 1098
+
+clockcounter: 1099
+
+clockcounter: 1100
+
+clockcounter: 1101
+
+clockcounter: 1102
+
+clockcounter: 1103
+
+clockcounter: 1104
+
+clockcounter: 1105
+
+clockcounter: 1106
+
+clockcounter: 1107
+
+clockcounter: 1108
+
+clockcounter: 1109
+
+clockcounter: 1110
+
+clockcounter: 1111
+
+clockcounter: 1112
+
+clockcounter: 1113
+
+clockcounter: 1114
+
+clockcounter: 1115
+
+clockcounter: 1116
+
+clockcounter: 1117
+
+clockcounter: 1118
+
+clockcounter: 1119
+
+clockcounter: 1120
+
+clockcounter: 1121
+
+clockcounter: 1122
+
+clockcounter: 1123
+
+clockcounter: 1124
+
+clockcounter: 1125
+
+clockcounter: 1126
+
+clockcounter: 1127
+
+clockcounter: 1128
+
+clockcounter: 1129
+
+clockcounter: 1130
+
+clockcounter: 1131
+
+clockcounter: 1132
+
+clockcounter: 1133
+
+clockcounter: 1134
+
+clockcounter: 1135
+
+clockcounter: 1136
+
+clockcounter: 1137
+
+clockcounter: 1138
+
+clockcounter: 1139
+
+clockcounter: 1140
+
+clockcounter: 1141
+
+clockcounter: 1142
+
+clockcounter: 1143
+
+clockcounter: 1144
+
+clockcounter: 1145
+
+clockcounter: 1146
+
+clockcounter: 1147
+
+clockcounter: 1148
+
+clockcounter: 1149
+
+clockcounter: 1150
+
+clockcounter: 1151
+
+clockcounter: 1152
+
+clockcounter: 1153
+
+clockcounter: 1154
+
+clockcounter: 1155
+
+clockcounter: 1156
+
+clockcounter: 1157
+
+clockcounter: 1158
+
+clockcounter: 1159
+
+clockcounter: 1160
+
+clockcounter: 1161
+
+clockcounter: 1162
+
+clockcounter: 1163
+
+clockcounter: 1164
+
+clockcounter: 1165
+
+clockcounter: 1166
+
+clockcounter: 1167
+
+clockcounter: 1168
+
+clockcounter: 1169
+
+clockcounter: 1170
+
+clockcounter: 1171
+
+clockcounter: 1172
+
+clockcounter: 1173
+
+clockcounter: 1174
+
+clockcounter: 1175
+
+clockcounter: 1176
+
+clockcounter: 1177
+
+clockcounter: 1178
+
+clockcounter: 1179
+
+clockcounter: 1180
+
+clockcounter: 1181
+
+clockcounter: 1182
+
+clockcounter: 1183
+
+clockcounter: 1184
+
+clockcounter: 1185
+
+clockcounter: 1186
+
+clockcounter: 1187
+
+clockcounter: 1188
+
+clockcounter: 1189
+
+clockcounter: 1190
+
+clockcounter: 1191
+
+clockcounter: 1192
+
+clockcounter: 1193
+
+clockcounter: 1194
+
+clockcounter: 1195
+
+clockcounter: 1196
+
+clockcounter: 1197
+
+clockcounter: 1198
+
+clockcounter: 1199
+
+clockcounter: 1200
+
+clockcounter: 1201
+
+clockcounter: 1202
+
+clockcounter: 1203
+
+clockcounter: 1204
+
+clockcounter: 1205
+
+clockcounter: 1206
+
+clockcounter: 1207
+
+clockcounter: 1208
+
+clockcounter: 1209
+
+clockcounter: 1210
+
+clockcounter: 1211
+
+clockcounter: 1212
+
+clockcounter: 1213
+
+clockcounter: 1214
+
+clockcounter: 1215
+
+clockcounter: 1216
+
+clockcounter: 1217
+
+clockcounter: 1218
+
+clockcounter: 1219
+
+clockcounter: 1220
+
+clockcounter: 1221
+
+clockcounter: 1222
+
+clockcounter: 1223
+
+clockcounter: 1224
+
+clockcounter: 1225
+
+clockcounter: 1226
+
+clockcounter: 1227
+
+clockcounter: 1228
+
+clockcounter: 1229
+
+clockcounter: 1230
+
+clockcounter: 1231
+
+clockcounter: 1232
+
+clockcounter: 1233
+
+clockcounter: 1234
+
+clockcounter: 1235
+
+clockcounter: 1236
+
+clockcounter: 1237
+
+clockcounter: 1238
+
+clockcounter: 1239
+
+clockcounter: 1240
+
+clockcounter: 1241
+
+clockcounter: 1242
+
+clockcounter: 1243
+
+clockcounter: 1244
+
+clockcounter: 1245
+
+clockcounter: 1246
+
+clockcounter: 1247
+
+clockcounter: 1248
+
+clockcounter: 1249
+
+clockcounter: 1250
+
+clockcounter: 1251
+
+clockcounter: 1252
+
+clockcounter: 1253
+
+clockcounter: 1254
+
+clockcounter: 1255
+
+clockcounter: 1256
+
+clockcounter: 1257
+
+clockcounter: 1258
+
+clockcounter: 1259
+
+clockcounter: 1260
+
+clockcounter: 1261
+
+clockcounter: 1262
+
+clockcounter: 1263
+
+clockcounter: 1264
+
+clockcounter: 1265
+
+clockcounter: 1266
+
+clockcounter: 1267
+
+clockcounter: 1268
+
+clockcounter: 1269
+
+clockcounter: 1270
+
+clockcounter: 1271
+
+clockcounter: 1272
+
+clockcounter: 1273
+
+clockcounter: 1274
+
+clockcounter: 1275
+
+clockcounter: 1276
+
+clockcounter: 1277
+
+clockcounter: 1278
+
+clockcounter: 1279
+
+clockcounter: 1280
+
+clockcounter: 1281
+
+clockcounter: 1282
+
+clockcounter: 1283
+
+clockcounter: 1284
+
+clockcounter: 1285
+
+clockcounter: 1286
+
+clockcounter: 1287
+
+clockcounter: 1288
+
+clockcounter: 1289
+
+clockcounter: 1290
+
+clockcounter: 1291
+
+clockcounter: 1292
+
+clockcounter: 1293
+
+clockcounter: 1294
+
+clockcounter: 1295
+
+clockcounter: 1296
+
+clockcounter: 1297
+
+clockcounter: 1298
+
+clockcounter: 1299
+
+clockcounter: 1300
+
+clockcounter: 1301
+
+clockcounter: 1302
+
+clockcounter: 1303
+
+clockcounter: 1304
+
+clockcounter: 1305
+
+clockcounter: 1306
+
+clockcounter: 1307
+
+clockcounter: 1308
+
+clockcounter: 1309
+
+clockcounter: 1310
+
+clockcounter: 1311
+
+clockcounter: 1312
+
+clockcounter: 1313
+
+clockcounter: 1314
+
+clockcounter: 1315
+
+clockcounter: 1316
+
+clockcounter: 1317
+
+clockcounter: 1318
+
+clockcounter: 1319
+
+clockcounter: 1320
+
+clockcounter: 1321
+
+clockcounter: 1322
+
+clockcounter: 1323
+
+clockcounter: 1324
+
+clockcounter: 1325
+
+clockcounter: 1326
+
+clockcounter: 1327
+
+clockcounter: 1328
+
+clockcounter: 1329
+
+clockcounter: 1330
+
+clockcounter: 1331
+
+clockcounter: 1332
+
+clockcounter: 1333
+
+clockcounter: 1334
+
+clockcounter: 1335
+
+clockcounter: 1336
+
+clockcounter: 1337
+
+clockcounter: 1338
+
+clockcounter: 1339
+
+clockcounter: 1340
+
+clockcounter: 1341
+
+clockcounter: 1342
+
+clockcounter: 1343
+
+clockcounter: 1344
+
+clockcounter: 1345
+
+clockcounter: 1346
+
+clockcounter: 1347
+
+clockcounter: 1348
+
+clockcounter: 1349
+
+clockcounter: 1350
+
+clockcounter: 1351
+
+clockcounter: 1352
+
+clockcounter: 1353
+
+clockcounter: 1354
+
+clockcounter: 1355
+
+clockcounter: 1356
+
+clockcounter: 1357
+
+clockcounter: 1358
+
+clockcounter: 1359
+
+clockcounter: 1360
+
+clockcounter: 1361
+
+clockcounter: 1362
+
+clockcounter: 1363
+
+clockcounter: 1364
+
+clockcounter: 1365
+
+clockcounter: 1366
+
+clockcounter: 1367
+
+clockcounter: 1368
+
+clockcounter: 1369
+
+clockcounter: 1370
+
+clockcounter: 1371
+
+clockcounter: 1372
+
+clockcounter: 1373
+
+clockcounter: 1374
+
+clockcounter: 1375
+
+clockcounter: 1376
+
+clockcounter: 1377
+
+clockcounter: 1378
+
+clockcounter: 1379
+
+clockcounter: 1380
+
+clockcounter: 1381
+
+clockcounter: 1382
+
+clockcounter: 1383
+
+clockcounter: 1384
+
+clockcounter: 1385
+
+clockcounter: 1386
+
+clockcounter: 1387
+
+clockcounter: 1388
+
+clockcounter: 1389
+
+clockcounter: 1390
+
+clockcounter: 1391
+
+clockcounter: 1392
+
+clockcounter: 1393
+
+clockcounter: 1394
+
+clockcounter: 1395
+
+clockcounter: 1396
+
+clockcounter: 1397
+
+clockcounter: 1398
+
+clockcounter: 1399
+
+clockcounter: 1400
+
+clockcounter: 1401
+
+clockcounter: 1402
+
+clockcounter: 1403
+
+clockcounter: 1404
+
+clockcounter: 1405
+
+clockcounter: 1406
+
+clockcounter: 1407
+
+clockcounter: 1408
+
+clockcounter: 1409
+
+clockcounter: 1410
+
+clockcounter: 1411
+
+clockcounter: 1412
+
+clockcounter: 1413
+
+clockcounter: 1414
+
+clockcounter: 1415
+
+clockcounter: 1416
+
+clockcounter: 1417
+
+clockcounter: 1418
+
+clockcounter: 1419
+
+clockcounter: 1420
+
+clockcounter: 1421
+
+clockcounter: 1422
+
+clockcounter: 1423
+
+clockcounter: 1424
+
+clockcounter: 1425
+
+clockcounter: 1426
+
+clockcounter: 1427
+
+clockcounter: 1428
+
+clockcounter: 1429
+
+clockcounter: 1430
+
+clockcounter: 1431
+
+clockcounter: 1432
+
+clockcounter: 1433
+
+clockcounter: 1434
+
+clockcounter: 1435
+
+clockcounter: 1436
+
+clockcounter: 1437
+
+clockcounter: 1438
+
+clockcounter: 1439
+
+clockcounter: 1440
+
+clockcounter: 1441
+
+clockcounter: 1442
+
+clockcounter: 1443
+
+clockcounter: 1444
+
+clockcounter: 1445
+
+clockcounter: 1446
+
+clockcounter: 1447
+
+clockcounter: 1448
+
+clockcounter: 1449
+
+clockcounter: 1450
+
+clockcounter: 1451
+
+clockcounter: 1452
+
+clockcounter: 1453
+
+clockcounter: 1454
+
+clockcounter: 1455
+
+clockcounter: 1456
+
+clockcounter: 1457
+
+clockcounter: 1458
+
+clockcounter: 1459
+
+clockcounter: 1460
+
+clockcounter: 1461
+
+clockcounter: 1462
+
+clockcounter: 1463
+
+clockcounter: 1464
+
+clockcounter: 1465
+
+clockcounter: 1466
+
+clockcounter: 1467
+
+clockcounter: 1468
+
+clockcounter: 1469
+
+clockcounter: 1470
+
+clockcounter: 1471
+
+clockcounter: 1472
+
+clockcounter: 1473
+
+clockcounter: 1474
+
+clockcounter: 1475
+
+clockcounter: 1476
+
+clockcounter: 1477
+
+clockcounter: 1478
+
+clockcounter: 1479
+
+clockcounter: 1480
+
+clockcounter: 1481
+
+clockcounter: 1482
+
+clockcounter: 1483
+
+clockcounter: 1484
+
+clockcounter: 1485
+
+clockcounter: 1486
+
+clockcounter: 1487
+
+clockcounter: 1488
+
+clockcounter: 1489
+
+clockcounter: 1490
+
+clockcounter: 1491
+
+clockcounter: 1492
+
+clockcounter: 1493
+
+clockcounter: 1494
+
+clockcounter: 1495
+
+clockcounter: 1496
+
+clockcounter: 1497
+
+clockcounter: 1498
+
+clockcounter: 1499
+
+clockcounter: 1500
+
+clockcounter: 1501
+
+clockcounter: 1502
+
+clockcounter: 1503
+
+clockcounter: 1504
+
+clockcounter: 1505
+
+clockcounter: 1506
+
+clockcounter: 1507
+
+clockcounter: 1508
+
+clockcounter: 1509
+
+clockcounter: 1510
+
+clockcounter: 1511
+
+clockcounter: 1512
+
+clockcounter: 1513
+
+clockcounter: 1514
+
+clockcounter: 1515
+
+clockcounter: 1516
+
+clockcounter: 1517
+
+clockcounter: 1518
+
+clockcounter: 1519
+
+clockcounter: 1520
+
+clockcounter: 1521
+
+clockcounter: 1522
+
+clockcounter: 1523
+
+clockcounter: 1524
+
+clockcounter: 1525
+
+clockcounter: 1526
+
+clockcounter: 1527
+
+clockcounter: 1528
+
+clockcounter: 1529
+
+clockcounter: 1530
+
+clockcounter: 1531
+
+clockcounter: 1532
+
+clockcounter: 1533
+
+clockcounter: 1534
+
+clockcounter: 1535
+
+clockcounter: 1536
+
+clockcounter: 1537
+
+clockcounter: 1538
+
+clockcounter: 1539
+
+clockcounter: 1540
+
+clockcounter: 1541
+
+clockcounter: 1542
+
+clockcounter: 1543
+
+clockcounter: 1544
+
+clockcounter: 1545
+
+clockcounter: 1546
+
+clockcounter: 1547
+
+clockcounter: 1548
+
+clockcounter: 1549
+
+clockcounter: 1550
+
+clockcounter: 1551
+
+clockcounter: 1552
+
+clockcounter: 1553
+
+clockcounter: 1554
+
+clockcounter: 1555
+
+clockcounter: 1556
+
+clockcounter: 1557
+
+clockcounter: 1558
+
+clockcounter: 1559
+
+clockcounter: 1560
+
+clockcounter: 1561
+
+clockcounter: 1562
+
+clockcounter: 1563
+
+clockcounter: 1564
+
+clockcounter: 1565
+
+clockcounter: 1566
+
+clockcounter: 1567
+
+clockcounter: 1568
+
+clockcounter: 1569
+
+clockcounter: 1570
+
+clockcounter: 1571
+
+clockcounter: 1572
+
+clockcounter: 1573
+
+clockcounter: 1574
+
+clockcounter: 1575
+
+clockcounter: 1576
+
+clockcounter: 1577
+
+clockcounter: 1578
+
+clockcounter: 1579
+
+clockcounter: 1580
+
+clockcounter: 1581
+
+clockcounter: 1582
+
+clockcounter: 1583
+
+clockcounter: 1584
+
+clockcounter: 1585
+
+clockcounter: 1586
+
+clockcounter: 1587
+
+clockcounter: 1588
+
+clockcounter: 1589
+
+clockcounter: 1590
+
+clockcounter: 1591
+
+clockcounter: 1592
+
+clockcounter: 1593
+
+clockcounter: 1594
+
+clockcounter: 1595
+
+clockcounter: 1596
+
+clockcounter: 1597
+
+clockcounter: 1598
+
+clockcounter: 1599
+
+
+Press an option.

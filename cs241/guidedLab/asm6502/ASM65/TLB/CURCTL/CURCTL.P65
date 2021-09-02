@@ -1,0 +1,80 @@
+;
+; Author: [Your name goes here]
+; Description: Program to display a character in the middle of the screen, then allow
+;              user to move it right, left, up or down via special keyboard keys.
+;
+        .DEF  PZADDR = $0010        ;Page zero locations
+
+        .LOC PZADDR
+
+ROW:    .BYTE   0               ;Current screen row position (0,1,2,...) 
+COL:    .BYTE   0               ;Current screen column position (0,1,2,...)
+
+        .DEF BEGROW = $07       ;Beginning row position
+        .DEF BEGCOL = $1F       ;Beginning column position
+
+        ;Special ASCII character codes
+
+        .DEF    DISPCHR = '*    ;Character to display at random screen positions
+        .DEF    BLANK = $20     ;Blank space character
+        .DEF    CTRLC = $03     ;Ctrl-C
+        .DEF    CTRLR = $12     ;Ctrl-R
+
+        ;ASCII codes for movement control keys
+
+        .DEF    LEFT = 'j       ;Move left
+        .DEF    RIGHT = 'k      ;Move right
+        .DEF    UP = 'i         ;Move up
+        .DEF    DOWN = 'm       ;Move down    
+
+        ;Program start address
+  
+        .DEF  STADDR = $0200
+  
+        .LOC  STADDR
+
+PROG:   CLD                     ;Clear decimal mode
+        JSR     CONINI          ;Initialize console input
+        JSR     CONINO          ;Initialize console output
+        LDA#    BEGROW          ;Set screen (row, col) to beginning position
+        STA     ROW
+        LDA#    BEGCOL
+        STA     COL
+SHOW:   LDA#    DISPCHR         ;Show display character at (row, col) position
+        JSR     COUTRC
+GETCH:  JSR     CONINP          ;Wait until a key is struck.
+        CMP#    CTRLR           ;Is the key Ctrl-R?
+        BEQ     PROG            ;Branch if yes. Restart program.
+        CMP#    CTRLC           ;Is the key Ctrl-C?
+        BEQ     EXIT            ;Branch if yes.  Exit program
+        LDA#    BLANK           ;Remove display character from current position
+        JSR     COUTRC
+
+        ; *** Your primary modifications go here. ***
+        
+        JMP     SHOW            ;Loop back and show display character at new position
+        
+EXIT:   BRK                     ;Break to ROM executive        
+
+;Subroutine to display the ASCII character passed in the accumulator on the screen
+;at the (ROW, COL) position on the console display.  ROW and COL are page zero locations.
+
+COUTRC: PHA                   ;Save AC value at entry on stack
+        TXA                   ;X into AC
+        PHA                   ;Save X value at entry on stack
+        LDA     ROW           ;Position display cursor at (ROW, COL)
+        LDX     COL
+        JSR     CONCUR
+        TSX                   ;Stack pointer into X
+        INX                   ;Two bytes back on stack is character to be output
+        INX
+        LDAX    $0100         ;Get character to be output
+        JSR     CONOUT        ;Display character at the current cursor position
+        PLA                   ;Restore X to entry point value
+        TAX
+        PLA                   ;Restore AC to entry point value
+        RTS                   ;Return to caller
+
+        .LINK   BIODEF        ;Include BIOS entry point definitions.
+      
+        .END

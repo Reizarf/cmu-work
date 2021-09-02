@@ -1,0 +1,49 @@
+%Choose 1 - aog pseudo code - algocompatible algorithmic
+\documentclass[12]{amsart}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\title{\LaTeX\ Psuedocode Example}%set title then later on \maketitle
+\author{Sullivan Frazier}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Power (Exponentiation)}
+%in order to NOT have the numbers, enter * right before first curly brace ^
+
+\begin{algorithm}
+\caption{Calculate $y = x^n$}
+
+\begin{algorithmic}
+\REQUIRE $n \geq 0 \vee x  \neq 0$
+\ENSURE $y = x^n$
+\STATE $y \leftarrow 1$
+\IF {$n < 0$}
+\STATE $X \leftarrow 1/x $
+\STATE $N \leftarrow -n$
+\ELSE 
+\STATE $X \leftarrow x$
+\STATE $N \leftarrow n$
+\ENDIF
+
+\WHILE{$N \neq 0$}
+
+\IF{$N$ is even}
+\STATE $X \leftarrow X \times X$
+\STATE $N \leftarrow N - 1$
+\ENDIF
+\ENDWHILE
+
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+
+
+
+
+
+
