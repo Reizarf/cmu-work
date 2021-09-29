@@ -3,6 +3,8 @@
 #include <fstream>
 #include "string.h"
 #include "DataType.h"
+#include "BinaryTree.cpp"
+
 using namespace std;
 
 
@@ -17,17 +19,10 @@ int main()
 
     ifstream inFile;
     string text;//going into here
-    //follow this order
-    //struct DataType;
-    //request a file name
+    
     DataType data; //declare data of type DataType
 
-    //open the file
-
-    //read a word
-
-    //while(more words)
-        //focus on the output right now
+    BinaryTree btree;//creating an object of the class to be used
 
     cout << "Hello user! Please enter the name of the file you'd like to read: " << endl;
 
@@ -49,7 +44,14 @@ int main()
         //construct a DataType instance with the word in it
         
         data.word = text;
-        
+        //okay so now we have the word
+
+        //next is to check if it exists - if not then insert
+        btree.Insert(text);//it's not liking it because text is a string??
+        //what does it need to be?
+
+
+        //maybe we can change the string into the datatype needed
         
         
 

@@ -19,7 +19,7 @@ struct DataType
 };
 
 
-int TreeDataCmp(const DataType&, const DataType&);
+int TreeDataCmp(const DataType&, const DataType&);//this needs work 
 
 #endif /* DataType_h */
 
