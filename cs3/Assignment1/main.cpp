@@ -53,7 +53,10 @@ int main()
 
         //maybe we can change the string into the datatype needed
         
-        
+        //we need to check to see if the word is or is not in the tree already
+
+        btree.SetIterator();//set current data to the root and then???
+
 
 
         cout << endl;
