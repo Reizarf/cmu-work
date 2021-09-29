@@ -16,7 +16,7 @@ struct DataType
 {
     string word;
     int freq;
-}data;
+};
 
 
 int TreeDataCmp(const DataType&, const DataType&);

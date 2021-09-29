@@ -6,11 +6,11 @@
 using namespace std;
 
 
-struct DataType
-{
-    string word;
-    int freq;
-};
+// struct DataType
+// {
+//     string word;
+//     int freq;
+// };
 
 int main()
 {
@@ -20,8 +20,8 @@ int main()
     //follow this order
     //struct DataType;
     //request a file name
-    struct DataType data; //declare data of type DataType
-        
+    DataType data; //declare data of type DataType
+
     //open the file
 
     //read a word
@@ -48,7 +48,7 @@ int main()
 
         //construct a DataType instance with the word in it
         
-
+        data.word = text;
         
         
         
