@@ -1,0 +1,12 @@
+I need to work on being able to compare the string data, and DataType data.
+
+
+
+undefined reference error on skeleton code:
+
+
+
+
+    while file is open
+    strcpy from my string into string in struct
+    

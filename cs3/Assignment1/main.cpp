@@ -2,27 +2,28 @@
 #include <iomanip>
 #include <fstream>
 #include "string.h"
-#include "DataType.h"
-#include "BinaryTree.cpp"
+//#include "DataType.h"
+//#include "BinaryTree.cpp"
 
 using namespace std;
 
 
-// struct DataType
-// {
-//     string word;
-//     int freq;
-// };
-
+//int TreeDataCmp(const DataType&, const DataType&)
+//{
+    //take read word from file and compare it against current
+    //being used by findnode(returns pointer to current node)
+    //return which is bigger (1/0/-1)
+    //return 0;
+//}
 int main()
 {
 
     ifstream inFile;
     string text;//going into here
     
-    DataType data; //declare data of type DataType
+    //DataType data; //declare data of type DataType
 
-    BinaryTree btree;//creating an object of the class to be used
+    //BinaryTree btree;//creating an object of the class to be used
 
     cout << "Hello user! Please enter the name of the file you'd like to read: " << endl;
 
@@ -47,6 +48,10 @@ int main()
         //okay so now we have the word
 
         //next is to check if it exists - if not then insert
+
+        //locate first and then insert
+        //if locate is true then increment freq and then delete the instance for memeory leaks
+
         btree.Insert(text);//it's not liking it because text is a string??
         //what does it need to be?
 
@@ -55,7 +60,7 @@ int main()
         
         //we need to check to see if the word is or is not in the tree already
 
-        btree.SetIterator();//set current data to the root and then???
+        //btree.SetIterator();//set current data to the root and then???
 
 
 
