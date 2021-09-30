@@ -9,11 +9,16 @@
 using namespace std;
 
 
-int TreeDataCmp(const DataType&, const DataType&)
+int TreeDataCmp(const DataType&, const DataType&)//were comparing the struct's string with root
 {
     // take read word from file and compare it against current
     // being used by findnode(returns pointer to current node)
     // return which is bigger (1/0/-1)
+    //https://cplusplus.com/reference/string/string/compare/
+
+    //BinaryTree::SetIterator();//set root to current
+    //then were going to compare root and our data
+    
 
     return 0;
 }
@@ -22,10 +27,10 @@ int main()
 
     ifstream inFile;
     string text;//going into here
-    
+    //char ctext[text.size() + 1];//creating char array size of string
     DataType data; //declare data of type DataType
     BinaryTree btree;//creating an object of the class to be used
-
+    BinaryTree::nodePtr currentNode;
     cout << "Hello user! Please enter the name of the file you'd like to read: " << endl;
 
     string input;//user input
@@ -46,24 +51,21 @@ int main()
         //construct a DataType instance with the word in it
         
         data.word = text;
-        //okay so now we have the word
-        strcpy(data.word,text);
-
+        
+        //strcpy(ctext,text.c_str());//copying text into ctext char array
+        
         //next is to check if it exists - if not then insert
+        btree.SetIterator();
+        //btree.Locate(ctext,currentNode);
 
         //locate first and then insert
         //if locate is true then increment freq and then delete the instance for memeory leaks
 
-        btree.Insert(text);//it's not liking it because text is a string??
+        //it's not liking it because text is a string??
         //what does it need to be?
         
 
-        //maybe we can change the string into the datatype needed
         
-        //we need to check to see if the word is or is not in the tree already
-
-        //btree.SetIterator();//set current data to the root and then???
-
 
 
         cout << endl;
