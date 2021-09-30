@@ -7,8 +7,6 @@
 
 #include "BinaryTree.h"
 
-#include "DataType.h"
-
 BinaryTree::BinaryTree()
 {
 	root = 0;
