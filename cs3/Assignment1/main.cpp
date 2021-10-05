@@ -9,19 +9,7 @@
 using namespace std;
 
 
-int TreeDataCmp(const DataType&, const DataType&)//were comparing the struct's string with root
-{
-    // take read word from file and compare it against current
-    // being used by findnode(returns pointer to current node)
-    // return which is bigger (1/0/-1)
-    //https://cplusplus.com/reference/string/string/compare/
 
-    //BinaryTree::SetIterator();//set root to current
-    //then were going to compare root and our data
-    
-
-    return 0;
-}
 int main()
 {
 
@@ -73,4 +61,30 @@ int main()
     }
 
 
+}
+
+int TreeDataCmp(const DataType data, const BinaryTree root)//were comparing the struct's string with root
+{
+    // take read word from file and compare it against current
+    // being used by findnode(returns pointer to current node)
+    // return which is bigger (1/0/-1)
+    //https://cplusplus.com/reference/string/string/compare/
+
+    //BinaryTree::SetIterator();//set root to current
+    //then were going to compare root and our data
+    if(strcmp() == 1)
+    {
+
+    }
+    if(strcmp() == 0)
+    {
+        
+    }
+    if(strcmp() == -1)
+    {
+        
+    }
+
+
+    return 0;
 }
