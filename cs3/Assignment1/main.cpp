@@ -2,7 +2,7 @@
 #include <iomanip>  
 #include <fstream>  //file manip
 #include <cstring> //include to use strcpy
-#include "string.h"
+#include <string.h>
 #include "DataType.h"
 #include "BinaryTree.cpp"
 
@@ -30,21 +30,18 @@ int main()
     while(inFile >> text)//this >> extraction operator skips whitesapce by deafault
     {
         cout << text;
-        //so now we have the word here
-        //and now it needs to be set to DataType.word?
-        //and then inserted into the tree
-        //increment freq
-
 
         //construct a DataType instance with the word in it
         
         data.word = text;
         
-        //strcpy(ctext,text.c_str());//copying text into ctext char array
-        
-        //next is to check if it exists - if not then insert
-        btree.SetIterator();
+        //btree.SetIterator();
         //btree.Locate(ctext,currentNode);
+        
+        // if(btree.Locate(data,data.word) == false)
+        // {
+
+        // }
 
         //locate first and then insert
         //if locate is true then increment freq and then delete the instance for memeory leaks
@@ -63,7 +60,7 @@ int main()
 
 }
 
-int TreeDataCmp(const DataType data, const BinaryTree root)//were comparing the struct's string with root
+int TreeDataCmp(const char* data, const char* root)//were comparing the struct's string with root
 {
     // take read word from file and compare it against current
     // being used by findnode(returns pointer to current node)
@@ -72,19 +69,35 @@ int TreeDataCmp(const DataType data, const BinaryTree root)//were comparing the 
 
     //BinaryTree::SetIterator();//set root to current
     //then were going to compare root and our data
-    if(strcmp() == 1)
-    {
+    BinaryTree btree;
+    // DataType data;
+    btree.SetIterator();
 
+
+    //while btree.More)
+    int strCompare = strcmp(data,root);
+
+    if(strCompare == 1)
+    {
+        // DataType::
     }
-    if(strcmp() == 0)
+    if(strCompare == 0)
     {
         
     }
-    if(strcmp() == -1)
+    if(strCompare == -1)
     {
         
     }
+    //btree.next()  (here or in the if's????)
 
 
+
+    //What's going on
+
+    //We need to finish up what happens in the if statements
+    //figure out how to increase word specific frequency
+    //complete the while loop while allowing to move to next word
+    //put returns in the if statements
     return 0;
 }
