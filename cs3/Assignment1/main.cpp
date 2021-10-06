@@ -35,57 +35,45 @@ int main()
         
         data.word = text;
         
-        //btree.SetIterator();
-        //btree.Locate(ctext,currentNode);
-        
-        // if(btree.Locate(data,data.word) == false)
-        // {
+        int length = text.length();//creating integer so find size of array
+        int length2 = currentNode->data.word.length();
 
-        // }
+        char char_array[length + 1];//creaing array
+        char char_array2[length2 + 1];
 
-        //locate first and then insert
-        //if locate is true then increment freq and then delete the instance for memeory leaks
+        strcpy(char_array,text.c_str());//copy string data into char array
+        strcpy(char_array2,currentNode->data.word.c_str());
 
-        //it's not liking it because text is a string??
-        //what does it need to be?
-        
-
+        TreeDataCmp(char_array,char_array2);
         
 
 
         cout << endl;
 
     }
-
-
 }
 
-int TreeDataCmp(const char* data, const char* root)//were comparing the struct's string with root
+int TreeDataCmp(const char* char_array, const char* char_array2)//were comparing the struct's string with root
 {
-    // take read word from file and compare it against current
-    // being used by findnode(returns pointer to current node)
-    // return which is bigger (1/0/-1)
-    //https://cplusplus.com/reference/string/string/compare/
-
-    //BinaryTree::SetIterator();//set root to current
-    //then were going to compare root and our data
+    
     BinaryTree btree;
-    // DataType data;
+    
     btree.SetIterator();
 
-
+    
     //while btree.More)
-    int strCompare = strcmp(data,root);
+    int strCompare = strcmp(char_array,char_array2);
 
-    if(strCompare == 1)
+    if(strCompare > 0)
     {
         // DataType::
     }
     if(strCompare == 0)
     {
-        
+        //if the words match
+        //freq++;
     }
-    if(strCompare == -1)
+    if(strCompare < 0)
     {
         
     }
@@ -95,9 +83,12 @@ int TreeDataCmp(const char* data, const char* root)//were comparing the struct's
 
     //What's going on
 
-    //We need to finish up what happens in the if statements
-    //figure out how to increase word specific frequency
-    //complete the while loop while allowing to move to next word
-    //put returns in the if statements
+    //Basically we got the TreeDataCmp function to work
+    //it return successfully(look at strcmp.cpp)
+    //now we need to be able to build and traverse
+    //the tree and cleanup afterwards
+    // - Finish the results area
+    // - don't forget about word frequency
+    //Look at Fibonacci
     return 0;
 }
