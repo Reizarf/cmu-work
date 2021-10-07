@@ -18,8 +18,10 @@ int main()
     string text;//going into here
     //char ctext[text.size() + 1];//creating char array size of string
     DataType data; //declare data of type DataType
+    // DataType tempNode;
     BinaryTree btree;//creating an object of the class to be used
     BinaryTree::nodePtr currentNode;
+    BinaryTree::nodePtr tempNode;
     cout << "Hello user! Please enter the name of the file you'd like to read: " << endl;
 
     string input;//user input
@@ -30,32 +32,41 @@ int main()
     
     while(inFile >> text)//this >> extraction operator skips whitesapce by default
     {
-        
         cout << text;
-        currentNode = new BinaryTree::node;
-        currentNode->data = data;
+        // currentNode = new BinaryTree::node;//create another temporary one
+        // //
+        //copy text variable into data.word
+        tempNode = new BinaryTree::node;
+        // tempNode->data = data;
+        tempNode->data.word = text;
+        data.word = text;
+
+        //pass locate the temporary node->data
+        //(if locate is true)
+        //itll write in temporary what the tree has
+        //delete(data,temp)
+        //in temp is freq
+        //freq+=1
+        //insert temp
+        
 
         //cout <<"data.word: " <<data.word << endl;
 
-        if(btree.Locate(data,currentNode->data) == true)//taking two data types 
+        if(btree.Locate(data,tempNode->data) == true)
         {//if the data in already in the tree
-            //currentNode->data.freq+=1;
-            currentNode->data.freq+=1;
-            cout <<" " << currentNode->data.freq;
+            tempNode->data.freq+=1;
+            cout << tempNode->data.freq << ":#"<<endl;
+            btree.Delete(tempNode->data,data);
+            
         }//and it is found, then increase freq
         else
         {//if it is NOT found
-            btree.Insert(data);
+            btree.Insert(tempNode->data);
         }//insert it into the tree
         
         cout << endl;
 
     }
-    //setiterator
-    //while binarytree has more
-        //cout << the word and it's frequency
-        //next()
-
     inFile.close();//closing the file
 
     btree.SetIterator();//setting root far left
@@ -63,7 +74,7 @@ int main()
     while(btree.More())//while there are words in the tree
     {
         
-        cout << "Word: " << data.word <<"  "<< "Freq: " << data.freq << endl;
+        cout << "Word: " << tempNode->data.word <<"  "<< "Freq: " << tempNode->data.freq << endl;
         data.freq++;
         btree.Next();//move to the next word and print again
     }
@@ -81,13 +92,6 @@ int TreeDataCmp(const DataType& data, const DataType& root)//were comparing the 
     
     btree.SetIterator();
 
-    // 
-	//take all data in as DataType
-	//inside of treedatacmp
-	//we will change from dataType to char array
-	//
-
-
 	int length1 = data.word.length();
 
 	int length2 = root.word.length();
@@ -101,10 +105,6 @@ int TreeDataCmp(const DataType& data, const DataType& root)//were comparing the 
     //while btree.More)
     int strCompare = strcmp(char_array,char_array2);
 
-
-    //check to see if the word is in the tree
-
-    
     if(strCompare > 0)
     {
         // DataType::
