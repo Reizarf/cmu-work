@@ -14,6 +14,7 @@ int main()
 {
 
     ifstream inFile;
+
     string text;//going into here
     //char ctext[text.size() + 1];//creating char array size of string
     DataType data; //declare data of type DataType
@@ -27,34 +28,24 @@ int main()
 
     inFile.open(input + ".txt");//you can enter raw filename no extension
     
-    while(inFile >> text)//this >> extraction operator skips whitesapce by deafault
+    while(inFile >> text)//this >> extraction operator skips whitesapce by default
     {
         
         cout << text;
+        currentNode = new BinaryTree::node;
+        currentNode->data = data;
 
-        //construct a DataType instance with the word in it
-        
-        data.word = text;//SEG FAULT HERE
-        cout <<endl<<"here" <<endl;
-        int length = text.length();//creating integer so find size of array
-        int length2 = currentNode->data.word.length();
-        cout <<endl<<"here!!" <<endl;
-        char char_array[length + 1];//creaing array
-        char char_array2[length2 + 1];
+        //cout <<"data.word: " <<data.word << endl;
 
-        strcpy(char_array,text.c_str());//copy string data into char array
-        strcpy(char_array2,currentNode->data.word.c_str());
-        
-        //TreeDataCmp(char_array,char_array2);//testing functionality
-        
-        // btree.Locate(data,currentNode->data);
-        if(btree.Locate(data,currentNode->data) == true)
+        if(btree.Locate(data,currentNode->data) == true)//taking two data types 
         {//if the data in already in the tree
+            //currentNode->data.freq+=1;
             currentNode->data.freq+=1;
+            cout <<" " << currentNode->data.freq;
         }//and it is found, then increase freq
         else
         {//if it is NOT found
-            btree.Insert(currentNode->data);
+            btree.Insert(data);
         }//insert it into the tree
         
         cout << endl;
@@ -68,11 +59,19 @@ int main()
     inFile.close();//closing the file
 
     btree.SetIterator();//setting root far left
+
     while(btree.More())//while there are words in the tree
     {
+        
         cout << "Word: " << data.word <<"  "<< "Freq: " << data.freq << endl;
+        data.freq++;
         btree.Next();//move to the next word and print again
     }
+    // btree.SetIterator();
+    // if(btree.More())
+    // {
+    //     cout << "if:line Word: " << data.word <<"  "<< "Freq: " << data.freq << endl;
+    // }
 
 }
 int TreeDataCmp(const DataType& data, const DataType& root)//were comparing the struct's string with root
