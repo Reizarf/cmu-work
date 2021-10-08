@@ -33,34 +33,21 @@ int main()
     while(inFile >> text)//this >> extraction operator skips whitesapce by default
     {
         cout << text;
-        // currentNode = new BinaryTree::node;//create another temporary one
-        // //
-        //copy text variable into data.word
-        tempNode = new BinaryTree::node;
-        // tempNode->data = data;
-        //tempNode->data.word = text;
-
         
-        strcpy(tempNode->data.word,text);
+        tempNode = new BinaryTree::node;//creating temp node
+        tempNode->data.word = text;//passing string into node's data
+        //I need to create the new temp node
+        //pass my word into it, or do I wait? Because Locate 
+        //will get me the current node???
         
-
-        //pass locate the temporary node->data
-        //(if locate is true)
-        //itll write in temporary what the tree has
-        //delete(data,temp)
-        //in temp is freq
-        //freq+=1
-        //insert temp
-        
-
-        //cout <<"data.word: " <<data.word << endl;
-
         if(btree.Locate(data,tempNode->data) == true)
         {//if the data in already in the tree
             tempNode->data.freq+=1;
             cout << tempNode->data.freq << ":#"<<endl;
             btree.Delete(tempNode->data,data);
-            
+            //Then I'd insert it here
+            //and finally increase frequency
+            tempNode->data.freq+=1;
         }//and it is found, then increase freq
         else
         {//if it is NOT found
