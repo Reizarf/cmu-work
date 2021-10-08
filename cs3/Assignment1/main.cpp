@@ -38,8 +38,11 @@ int main()
         //copy text variable into data.word
         tempNode = new BinaryTree::node;
         // tempNode->data = data;
-        tempNode->data.word = text;
-        data.word = text;
+        //tempNode->data.word = text;
+
+        
+        strcpy(tempNode->data.word,text);
+        
 
         //pass locate the temporary node->data
         //(if locate is true)
