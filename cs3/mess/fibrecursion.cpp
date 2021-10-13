@@ -17,9 +17,9 @@ double fib(double n)
 int main()
 {
     clock_t start = 0,end = 0;
-
+    //declaring start and end variables
     double processTime = 0;
-    
+    //total time taken
     double n;
     cout << "This program calculates the nth degree of the"
     "fibonacci sequence, done RECURSIVELY." << endl <<
