@@ -20,7 +20,9 @@ void fibonacciSequence(double number)
 int main()
 {
     double number;
-    cout << "Enter the number you'd like to see of the Fibonacci series: " <<endl;
+    cout << "This program calculates the nth degree of the"
+    "fibonacci sequence, done ITERATIVELY." << endl <<
+    "Enter the degree of fibonacci sequence you'd like to see: "<<endl;
     cin >> number;
     cout << ": ";
     fibonacciSequence(number);
