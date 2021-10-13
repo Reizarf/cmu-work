@@ -14,7 +14,7 @@ double fib(double n)
 
 int main()
 {
-        double n = 50;
+    double n = 49;//this took 51 seconds 
 
 
     cout << fib(n);

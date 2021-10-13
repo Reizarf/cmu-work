@@ -1,8 +1,7 @@
 #include <iostream>
+#include <clock.h>
+
 using namespace std;
-//a = x
-//b = y
-//c = z
 
 void fibonacciSequence(double number)
 {
