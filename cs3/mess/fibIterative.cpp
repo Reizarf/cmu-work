@@ -1,9 +1,7 @@
 #include <iostream>
-<<<<<<< HEAD
-#include <clock.h>
-=======
+
 #include <time.h>
->>>>>>> b007beaccf52f448a8a9ab1e7628554614822deb
+
 
 using namespace std;
 
