@@ -219,3 +219,6 @@ bool BinaryTree::More()
 {
 	return (icurr != 0);
 }	
+
+
+

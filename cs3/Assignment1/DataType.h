@@ -19,7 +19,8 @@ struct DataType
 };
 
 
-int TreeDataCmp(const DataType&, const DataType&);//this needs work 
+int TreeDataCmp(const DataType&, const DataType&);
+//or (const char* char_array,const char* char_array2)
 
 #endif /* DataType_h */
 

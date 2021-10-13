@@ -9,8 +9,10 @@
 #define BINARYTREE_H
 
 #include "DataType.h"
+#include <cstring>
 
 int TreeDataCmp(const DataType&,const DataType&);
+
 
 class BinaryTree
 {
@@ -23,6 +25,7 @@ class BinaryTree
 		void SetIterator();	// find left most node
 		DataType Next();	// return next data item
 		bool More();		// are there any more nodes?
+		//int TreeDataCmp(const char* &char_array, const char* &char_array2);
 
 		struct node;
 		typedef node *nodePtr;
@@ -39,5 +42,8 @@ class BinaryTree
 		void InsertNode(const DataType&, nodePtr&);
 		void PostOrderDelete(nodePtr);
 };
+
+
+
 
 #endif
