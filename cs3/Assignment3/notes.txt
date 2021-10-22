@@ -1,0 +1,2 @@
+seekg
+reading file should be one command
