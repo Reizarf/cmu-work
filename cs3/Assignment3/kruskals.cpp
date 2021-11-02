@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <time.h>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int find(int i)
     return i;
 }
 
-//does union of i and j - it return falise
+//does union of i and j - it return false
 //if i and j are already in same set
 
 void union1(int i, int j)
@@ -50,7 +51,7 @@ void KruskalMST(int cost[][V])
                     a = i;
                     b = j;
                     comparisons++;
-                    cout << "comparisons: " << comparisons << endl;
+                    
                 }
             }
         }
@@ -59,7 +60,8 @@ void KruskalMST(int cost[][V])
             edgeCount++,a,b,min);
         minCost += min;
     }
-    printf("\n Minimumc cost = %d \n", minCost);
+    printf("\nMinimum cost = %d \n", minCost);
+    cout << "comparisons: " << comparisons << endl;
 }
 
 int main()
@@ -76,8 +78,19 @@ int main()
         {INT_MAX,INT_MAX,INT_MAX,INT_MAX,6,12,16,INT_MAX,INT_MAX,13},
         {INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,INT_MAX,6,8,13,INT_MAX}
     };
+    clock_t start,end;
 
-    KruskalMST(cost);
+    double timeTaken;
 
+    start = clock();
+    
+    KruskalMST(cost);//function call here
+    
+    end = clock();
+
+    timeTaken = ((double) (end-start));
+
+    cout << "The amount of time taken in clocks per sec: " <<timeTaken << endl;
+    
     return 0;
 }
