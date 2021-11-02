@@ -34,3 +34,12 @@ int main(){
 
     
 }
+
+
+
+//get your own readifle working'
+//^^^
+
+//look in the book for horspool
+//brute force pseudo code
+//kmp??
