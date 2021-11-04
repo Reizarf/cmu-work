@@ -1,7 +1,7 @@
 int * BruteForce(char text[], char pattern[]);
-int BruteCompareF();
+int BruteCompF();
 int BruteCountF();
-void BruteReset();
+void BReset();
 
 
 int HorCounting();
