@@ -1,4 +1,5 @@
 #include <string.h>
+#include "algo.h"
 static int HorCount = 0, HorComp = 0;
 
 char* shiftTable(char pattern[])
