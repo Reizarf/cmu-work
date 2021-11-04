@@ -30,13 +30,13 @@ int* KMPSearch(char* pattern, char* text)
         {
             int k = i - j;
             position[KMPCount] = i - j;
-            cout << "Pattern found at:"<<k<<endl;
+            //cout << "Pattern found at:"<<k<<endl;
             j = lps[j-1];
             //increment counter here
             KMPCount++;
         }
         //mismatch after j matches
-        else if ( i < N && pattern[j] != text[i])
+        else if (i < N && pattern[j] != text[i])
         {
             //do not match lps
             //they will match anyway
@@ -50,8 +50,8 @@ int* KMPSearch(char* pattern, char* text)
     return position;
 }
 
-void computeLPSArray(char* pattern, int M, int* lps)//compute prefix function
-{
+void computeLPSArray(char* pattern, int M, int* lps)
+{//compute prefix function
     //length of the previous longest suffix
     int length = 0;
 
@@ -73,6 +73,7 @@ void computeLPSArray(char* pattern, int M, int* lps)//compute prefix function
             i++;
         }
     }
+    // return lps[];
 }
 
 

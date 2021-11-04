@@ -46,7 +46,7 @@ int main()
     cin >> testPiece;
     int patternSize = testPiece.length();
     char sample[patternSize];
-    
+
     strcpy(sample,testPiece.c_str());
     //clock start
     int * results;
