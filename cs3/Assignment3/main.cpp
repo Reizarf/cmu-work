@@ -21,6 +21,12 @@ int main()
     {
         inFile.open(fileName,ios::in);
     }
+    else
+    {
+        cout << "Could not find that filename - "<<endl
+            <<"Please make sure the file is in this directory."<<endl;
+            return 0;
+    }
     inFile.seekg(0,ios::end);
     int fileLen;
     fileLen = (int)inFile.tellg();
@@ -40,35 +46,39 @@ int main()
     cin >> testPiece;
     int patternSize = testPiece.length();
     char sample[patternSize];
-
+    
     strcpy(sample,testPiece.c_str());
     //clock start
-    int * results = horsPoolMatching(bufferArray,sample);
+    int * results;
     //clock stop
-    cout<< "This is how many time is ocurred: " << HorCounting() << endl;
+    HorReset();//set counters to 0
+    //results = horsPoolMatching(sample,bufferArray);
+    cout<< "This is how many time is ocurred in horspool: " << HorCounting() << endl;
     for(int i = 0; i < HorCounting();i++)
     {
-        cout << results[i] << " ";
+        cout <<"@: " <<results[i] << " "<<endl;
     }
     delete[] results;
 
+    KMPReset();//set counters to 0
     //clock start
-    results = KMPSearch(bufferArray,sample);
+    results = KMPSearch(sample,bufferArray);
     //clock stop
-    cout<< "This is how many time is ocurred: " << KMPCountF() << endl;
+    cout<< "This is how many time is ocurred in KMP: " << KMPCountF() << endl;
     for(int i = 0; i < KMPCountF();i++)
     {
-        cout << results[i] << " ";
+        cout <<"@: " <<results[i] << " "<<endl;
     }
     delete[] results;
 
+    BReset();//set counters to 0
     //clock start
     results = BruteForce(bufferArray,sample);
     //clock stop
-    cout<< "This is how many time is ocurred: " << BruteCountF() << endl;
+    cout<< "This is how many times it ocurred with brute force: " << BruteCountF() << endl;
     for(int i = 0; i < BruteCountF();i++)
     {
-        cout << results[i] << " ";
+        cout <<"@: "<< results[i]<<endl;
     }
     
     delete[] results;
