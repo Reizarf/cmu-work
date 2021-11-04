@@ -43,7 +43,7 @@ int main()
 
     strcpy(sample,testPiece.c_str());
     //clock start
-    int * results = horsPoolMatching(bufferArray,sample);
+    int * results;//= horsPoolMatching(bufferArray,sample);
     //clock stop
     cout<< "This is how many time is ocurred: " << HorCounting() << endl;
     for(int i = 0; i < HorCounting();i++)
@@ -53,7 +53,7 @@ int main()
     delete[] results;
 
     //clock start
-    results = KMPSearch(bufferArray,sample);
+    results = KMPSearch(sample,bufferArray);
     //clock stop
     cout<< "This is how many time is ocurred: " << KMPCountF() << endl;
     for(int i = 0; i < KMPCountF();i++)
@@ -68,7 +68,7 @@ int main()
     cout<< "This is how many time is ocurred: " << BruteCountF() << endl;
     for(int i = 0; i < BruteCountF();i++)
     {
-        cout << results[i] << " ";
+        cout <<"@: "<< results[i];
     }
     
     delete[] results;

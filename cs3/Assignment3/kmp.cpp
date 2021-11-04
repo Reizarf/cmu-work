@@ -45,6 +45,7 @@ int* KMPSearch(char* pattern, char* text)
             else
                 i = i + 1;
         }
+        KMPCompare++;
     }
     return position;
 }
@@ -68,16 +69,8 @@ void computeLPSArray(char* pattern, int M, int* lps)//compute prefix function
         }
         else//pattern[i] != pattern[length]
         {
-            if(length != 0)
-            {
-                length = lps[length -1];
-                //do not increment i here
-            }
-            else
-            {
-                lps[i] = 0;
-                i++;
-            }
+            lps[i] = 0;
+            i++;
         }
     }
 }

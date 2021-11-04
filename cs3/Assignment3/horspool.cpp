@@ -17,7 +17,6 @@ char* shiftTable(char pattern[])
         Table[pattern[j]] = m - 1 - j;
     }
     return Table;
-
 }
 
 int* horsPoolMatching(char pattern[], char data[])
