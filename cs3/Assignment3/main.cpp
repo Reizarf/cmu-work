@@ -191,3 +191,31 @@ int main()
     return 0;
 
 }
+
+
+
+
+
+//brute force from ben
+int bruteForce(char* tex, char* pattern){ // dont know if this is working
+    cout << tex << endl;
+    cout << pattern << endl;
+    int textLength=strlen(tex);
+    int patternLength=strlen(pattern);
+    cout << textLength << endl;
+    cout << patternLength << endl;
+    for(int i=0; i < textLength; i++){
+        cout << "here " << i << endl;
+        int j=0;
+        while(j<patternLength && pattern[j]==tex[i+j])
+        {
+            j++;
+            cout << j << endl;
+        }
+        if(j==patternLength) {
+          cout << "i= " << i<<endl;
+          return i;
+        }
+    }
+    return -1;
+}
