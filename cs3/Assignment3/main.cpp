@@ -7,7 +7,7 @@ policy at the University Website.
 https://coloradomesa.edu/student-services/documents
 Authors Name:       Sullivan Frazier
 UID(700#:)          700-479463
-Date:               13 October 2021
+Date:               5 November 2021
 
 Submissions that do not include the above academic 
 integrity statement will not be considered.
