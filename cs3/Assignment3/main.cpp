@@ -1,12 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <time.h>
 #include "algo.h"
 
 using namespace std;
 int main()
 {
     string userInput;
+    clock_t start = 0, end = 0;
+    double processTime = 0;
 
     int fLen;
 
@@ -42,7 +45,7 @@ int main()
 
     string testPiece;
 
-    cout << "enter the string you'd like to search for: "<<endl;
+    cout <<endl <<"enter the string you'd like to search for: "<<endl;
     cin >> testPiece;
     int patternSize = testPiece.length();
     char sample[patternSize];
@@ -50,37 +53,53 @@ int main()
     strcpy(sample,testPiece.c_str());
     //clock start
     int * results;
-    //clock stop
+    start = clock();
+    
     HorReset();//set counters to 0
     //results = horsPoolMatching(sample,bufferArray);
     cout<< "This is how many time is ocurred in horspool: " << HorCounting() << endl;
     for(int i = 0; i < HorCounting();i++)
     {
-        cout <<"@: " <<results[i] << " "<<endl;
+        cout <<"p:  " <<results[i] << " "<<endl;
     }
+    end = clock();
+    processTime = ((double) (end-start)) / CLOCKS_PER_SEC;
+    //cout processTime
+    cout << "processTime for horspool: " <<processTime <<endl;
+    start = 0, end = 0;
     delete[] results;
 
     KMPReset();//set counters to 0
     //clock start
+    start = clock();
     results = KMPSearch(sample,bufferArray);
     //clock stop
     cout<< "This is how many time is ocurred in KMP: " << KMPCountF() << endl;
     for(int i = 0; i < KMPCountF();i++)
     {
-        cout <<"@: " <<results[i] << " "<<endl;
+        cout <<"p:  " <<results[i] << " "<<endl;
     }
+    end = clock();
+    processTime = ((double) (end-start)) / CLOCKS_PER_SEC;
+    //cout processTime
+    cout << "processTime for KMP: " <<processTime <<endl;
+    start = 0, end = 0;
     delete[] results;
 
     BReset();//set counters to 0
     //clock start
+    start = clock();
     results = BruteForce(bufferArray,sample);
     //clock stop
     cout<< "This is how many times it ocurred with brute force: " << BruteCountF() << endl;
     for(int i = 0; i < BruteCountF();i++)
     {
-        cout <<"@: "<< results[i]<<endl;
+        cout <<"p:  "<< results[i]<<endl;
     }
-    
+    end = clock();
+    processTime = ((double) (end-start)) / CLOCKS_PER_SEC;
+    //cout processTime
+    cout << "processTime for BruteForce: " <<processTime <<endl;
     delete[] results;
     return 0;
 }
