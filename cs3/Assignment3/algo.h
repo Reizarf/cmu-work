@@ -23,7 +23,7 @@ int HorCounting();
 int HorComparing();
 void HorReset();
 int* horsPoolMatching(char pattern[], char data[]);
-char* shiftTable(char pattern[]);
+void shiftTable(char pattern[]);
 
 
 int* KMPSearch(char* pattern, char* text);

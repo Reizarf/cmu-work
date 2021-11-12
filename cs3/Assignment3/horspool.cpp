@@ -19,22 +19,22 @@ integrity statement will not be considered.
 #include <cstdio>
 #include "algo.h"
 static int HorCount = 0, HorComp = 0;
+const int size = 256;
+int Table[size];
 
-char* shiftTable(char pattern[])
+void shiftTable(char pattern[])
 {
     int m = strlen(pattern);
-    static char Table[26];
     
-
-    for(int i = 0; i < strlen(pattern); i++)
+    for(int i = 0; i < size-1; i++)
     {
         Table[i] = m;
     }
     for(int j = 0; j < m-2; j++)
     {
-        Table[pattern[j]] = m - 1 - j;//here it the issue
+        Table[pattern[j]] = m - j - 1;//here it the issue
     }
-    return Table;
+    
 }
 
 int* horsPoolMatching(char pattern[], char data[])
@@ -44,8 +44,8 @@ int* horsPoolMatching(char pattern[], char data[])
 
     shiftTable(pattern);
     int k = 0;
-    int m = strlen(pattern -1);
-    int n = strlen(data -1);
+    int m = strlen(pattern-1);
+    int n = strlen(data-1);
     int i = m - 1;
 
     while(i <= n -1)
@@ -54,15 +54,17 @@ int* horsPoolMatching(char pattern[], char data[])
         while ((k <= m - 1) && (pattern[m-1-k] = data[i-k]))
         {
             k = k + 1;
+            HorComp++;
         }
         if( k == m)
         {
-            position[HorCount] = i - m + 1;
+            position[HorCount] = (i - m + 1);
             HorCount++;
+            i = i + Table[data[i]];
         }
         else
         {
-        i = i + data[data[i]];
+            i = i + data[data[i]];
         }
     }
     return position;
@@ -81,40 +83,40 @@ void HorReset()
     HorCount = 0;
     HorComp = 0;
 }
-int sherine(char pattern[], char data[])
-{//pattern = sample and data = .txt
-    int table[126];
-    char t[100]{'\0'},p[25];
-    int m,i,k,j,m,flag = 0;
+// int sherine(char pattern[], char data[])
+// {//pattern = sample and data = .txt
+//     int table[126];
+//     char t[100]{'\0'},p[25];
+//     int m,i,k,j,m,flag = 0;
 
-    int n = strlen(pattern);//length of pattern
+//     int n = strlen(pattern);//length of pattern
 
-    int m = strlen(data);//length of .txt
+//     int m = strlen(data);//length of .txt
 
-    for(int i = 0; i < 126;i++)
-        table[i] = m;
+//     for(int i = 0; i < 126;i++)
+//         table[i] = m;
 
-    for(int j = 0;k<m-2;j++)
-        table[p[j]] = m - 1 - j;
-    i = m -1;
-    while(i<=n-1)
-    {
-        k=0;
-        while(k<=m-1 && p[m-1-k] == t[i-k])
-        {
-            k++;
-            if(k==m)
-            {
-                printf("The positios of the pattern is found at %d\n",i-m+2);
-                flag = 1;
-                break;
-            }
-            else
-                i = i+table[t[i]];
-        }
-        if(!flag)
-            printf("Pattern is not found in the given text");
-        return table[i];
-    }
+//     for(int j = 0;k<m-2;j++)
+//         table[p[j]] = m - 1 - j;
+//     i = m -1;
+//     while(i<=n-1)
+//     {
+//         k=0;
+//         while(k<=m-1 && p[m-1-k] == t[i-k])
+//         {
+//             k++;
+//             if(k==m)
+//             {
+//                 printf("The positios of the pattern is found at %d\n",i-m+2);
+//                 flag = 1;
+//                 break;
+//             }
+//             else
+//                 i = i+table[t[i]];
+//         }
+//         if(!flag)
+//             printf("Pattern is not found in the given text");
+//         return table[i];
+//     }
 
-}
+// }

@@ -72,7 +72,7 @@ int main()
     start = clock();
     
     HorReset();//set counters to 0
-    //results = horsPoolMatching(sample,bufferArray);
+    results = horsPoolMatching(sample,bufferArray);
     //results = sherine(sample,bufferArray);
 
     cout<< "This is how many time is ocurred in horspool: " << HorCounting() << endl;
