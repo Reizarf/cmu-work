@@ -19,10 +19,10 @@ integrity statement will not be considered.
 #include <cstdio>
 #include "algo.h"
 static int HorCount = 0, HorComp = 0;
-const int size = 256;
+const int size = 256;//25?
 int Table[size];
 
-void shiftTable(char pattern[])
+void shiftTable(char pattern[size])
 {
     int m = strlen(pattern);
     
@@ -34,7 +34,6 @@ void shiftTable(char pattern[])
     {
         Table[pattern[j]] = m - j - 1;//here it the issue
     }
-    
 }
 
 int* horsPoolMatching(char pattern[], char data[])
@@ -64,7 +63,7 @@ int* horsPoolMatching(char pattern[], char data[])
         }
         else
         {
-            i = i + data[data[i]];
+            i = i + Table[data[i]];
         }
     }
     return position;
