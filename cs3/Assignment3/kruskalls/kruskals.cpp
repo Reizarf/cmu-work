@@ -11,6 +11,10 @@ Date:               5 November 2021
 
 Submissions that do not include the above academic 
 integrity statement will not be considered.
+
+A. Levitin, Introduction to the design and analysis of algorithms, Pearson, Boston, MA, 2012. 
+https://www.geeksforgeeks.org/kruskals-algorithm-simple-implementation-for-adjacency-matrix/
+
 */
 
 #include <bits/stdc++.h>

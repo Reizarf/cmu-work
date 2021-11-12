@@ -18,7 +18,7 @@ int BruteCompF();
 int BruteCountF();
 void BReset();
 
-
+int sherine(char pattern[], char data[]);
 int HorCounting();
 int HorComparing();
 void HorReset();

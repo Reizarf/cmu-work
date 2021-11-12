@@ -9,6 +9,8 @@ Authors Name:       Sullivan Frazier
 UID(700#:)          700-479463
 Date:               5 November 2021
 
+A. Levitin, Introduction to the design and analysis of algorithms, Pearson, Boston, MA, 2012. 
+
 Submissions that do not include the above academic 
 integrity statement will not be considered.
 */
@@ -71,10 +73,12 @@ int main()
     
     HorReset();//set counters to 0
     //results = horsPoolMatching(sample,bufferArray);
+    //results = sherine(sample,bufferArray);
+
     cout<< "This is how many time is ocurred in horspool: " << HorCounting() << endl;
     for(int i = 0; i < HorCounting();i++)
     {
-        cout <<"p:  " <<results[i] << " "<<endl;
+        cout <<"position:  " <<results[i] << " "<<endl;
     }
     end = clock();
     processTime = ((double) (end-start)) / CLOCKS_PER_SEC;

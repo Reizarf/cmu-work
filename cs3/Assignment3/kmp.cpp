@@ -3,6 +3,22 @@ using namespace std;
 #include <string.h>
 #include "algo.h"
 static int KMPCount = 0, KMPCompare = 0;
+/*
+I declare that all material in this assessment task is
+my work except where there is clear acknowledgement
+or reference to the work of others. I further declared
+that I have complied to the CMU Academic Integrity
+policy at the University Website. 
+https://coloradomesa.edu/student-services/documents
+Authors Name:       Sullivan Frazier
+UID(700#:)          700-479463
+Date:               5 November 2021
+
+A. Levitin, Introduction to the design and analysis of algorithms, Pearson, Boston, MA, 2012. 
+
+Submissions that do not include the above academic 
+integrity statement will not be considered.
+*/
 int* KMPSearch(char* pattern, char* text)
 {
     int M = strlen(pattern);
