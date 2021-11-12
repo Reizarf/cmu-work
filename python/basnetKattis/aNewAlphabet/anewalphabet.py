@@ -1,8 +1,7 @@
-#reference : https://github.com/JonSteinn/Kattis-Solutions/blob/master/src/A%20New%20Alphabet/Python%203/anewalphabet.py
-
-new_Language_Map = {
+import unittest
+language_remap = {
     "A": "@",
-    "B": "8", 
+    "B": "8",
     "C": "(",
     "D": "|)",
     "E": "3",
@@ -13,8 +12,8 @@ new_Language_Map = {
     "J": "_|",
     "K": "|<",
     "L": "1",
-    "M": "[]\/[]",
-    "N": "[]\[]",
+    "M": "[]\\/[]",
+    "N": "[]\\[]",
     "O": "0",
     "P": "|D",
     "Q": "(,)",
@@ -22,9 +21,29 @@ new_Language_Map = {
     "S": "$",
     "T": "']['",
     "U": "|_|",
-    "V": "\/",
-    "W": "\/\/",
+    "V": "\\/",
+    "W": "\\/\\/",
+    "X": "}{",
     "Y": "`/",
     "Z": "2"
-
 }
+
+
+def lang(s):
+    o = ord(s)
+    if 97 <= o <= 122:
+        return language_remap[chr(o - 32)]
+    if 65 <= o <= 90:
+        return language_remap[s]
+    return s
+
+x = 'saveme'
+#for i in input():
+def saveme(x):
+    for i in input():
+        print(lang(i), end=' ')
+assert saveme(x) == '$ @ \/ 3 []\/[] 3'
+
+
+saveme()
+
