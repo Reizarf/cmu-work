@@ -1,10 +1,30 @@
-from statistics import mean
-#runs through each test case
-for i in range(int(input())):
-    x = list(map(int, input().split()))
-    x.pop(0)
-    avg = mean(x)
-    #calulcates the amount that is
-    #above average
-    print("{0:/3f]%".format(100*len([y for y in x if y>avg])/len(x),3))
-    
+import unittest
+
+
+x = '5\n 50 50 50 70 80'
+
+def aboveAverage(x):
+    for _ in range(int(input())):
+
+        scores = [int(x) for x in input().split()]
+        nums = scores.pop(0)
+
+        ans = sum([1/nums*100 for x in scores if x>sum(scores)/nums])
+
+        print("{:.3f}%".format(ans))
+
+
+#class TestAboveAverage():
+    #def testAverage():
+        #self.assertEqual(aboveAverage(x),y)
+
+
+#y = '5\n 50 50 50 70 80'
+#x = '5\n 50 50 50 70 80'
+aboveAverage(int(x))
+
+#x = 5;50;50;70;80;100
+#assert aboveAverage(int(input(x))) == 40.000
+#assert aboveAverage(5,50,50,70,80,100) == 20.000%
+
+

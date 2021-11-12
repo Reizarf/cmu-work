@@ -42,8 +42,8 @@ x = 'saveme'
 def saveme(x):
     for i in input():
         print(lang(i), end=' ')
-assert saveme(x) == '$ @ \/ 3 []\/[] 3'
+#assert saveme(x) == '$ @ \/ 3 []\/[] 3'
 
 
-saveme()
+saveme(x)
 
