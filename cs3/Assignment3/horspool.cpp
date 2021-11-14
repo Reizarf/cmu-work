@@ -8,7 +8,8 @@ https://coloradomesa.edu/student-services/documents
 Authors Name:       Sullivan Frazier
 UID(700#:)          700-479463
 Date:               5 November 2021
-
+#Sources
+https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
 A. Levitin, Introduction to the design and analysis of algorithms, Pearson, Boston, MA, 2012. 
 
 Submissions that do not include the above academic 

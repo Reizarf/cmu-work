@@ -50,7 +50,7 @@ int main()
 
     while(inFile >> text)//this >> extraction operator skips whitesapce by default
     {
-        //cout << text;
+        cout << text;
         
         tempNode->data.word = text;//passing string into node's data
         data.freq = 1;
