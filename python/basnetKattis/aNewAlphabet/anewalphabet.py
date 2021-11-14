@@ -28,7 +28,6 @@ language_remap = {
     "Z": "2"
 }
 
-
 def lang(s):
     o = ord(s)
     if 97 <= o <= 122:
@@ -36,6 +35,8 @@ def lang(s):
     if 65 <= o <= 90:
         return language_remap[s]
     return s
+def ord(s):
+    o = ord(s)
 
 x = 'saveme'
 #for i in input():
