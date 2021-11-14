@@ -28,7 +28,8 @@ x = 'bomb'
 class Test_tajna(unittest.TestCase):
     def test1_tajna(self):
         x = "bomb"
-        ans = tajna(x)#answer
+        ans = print(tajna(x))
+        #ans = tajna(x)#answer
         act = "bmob"#actual/expected
         self.assertEqual(ans,act,"broken")
     def test2_tajna(self):
