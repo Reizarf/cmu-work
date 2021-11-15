@@ -8,7 +8,7 @@ int sherine(char pattern[], char data[])
     char t[100]{'\0'},p[25];
     int i,k,j,flag = 0;
 
-    int n = strlen(pattern);//length of pattern
+    int n = strlen(t);//length of pattern
 
     int m = strlen(data);//length of .txt
 
@@ -48,8 +48,6 @@ int main()
     char data[200] = "one day this might work";
 
     int result = sherine(&p[25],&data[200]);
-
-    
     
     return 0;
 
