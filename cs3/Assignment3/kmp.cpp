@@ -14,9 +14,11 @@ Authors Name:       Sullivan Frazier
 UID(700#:)          700-479463
 Date:               5 November 2021
 
-#Sources:
+#Sources
 https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
 A. Levitin, Introduction to the design and analysis of algorithms, Pearson, Boston, MA, 2012. 
+https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
+https://www.geeksforgeeks.org/kruskals-algorithm-simple-implementation-for-adjacency-matrix/
 
 Submissions that do not include the above academic 
 integrity statement will not be considered.

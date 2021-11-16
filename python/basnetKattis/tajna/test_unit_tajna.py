@@ -12,6 +12,12 @@ class Test_tajna(unittest.TestCase):
         ans = tajna(x)
         act = ("klioieafd")
         self.assertEqual(ans,act,"broken")
+    def test3_tajna(self):
+        x = "bombshell"
+        ans = tajna(x)
+        act = (" ")
+        self.assertEqual(ans,act,"broken")
+        
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -22,20 +22,3 @@ def tajna(s):
 
 
 tajna(s)
-x = 'bomb'
-#print(tajna(x))
-
-# class Test_tajna(unittest.TestCase):
-#     def test1_tajna(self):
-#         x = "bomb"
-#         ans = tajna(x)#answer
-#         act = "bmob"#actual/expected
-#         self.assertEqual(ans,act,"broken")
-#     def test2_tajna(self):
-#         x = "koalified"
-#         ans = tajna(x)
-#         act = ("klioieafd")
-#         self.assertEqual(ans,act,"broken")
-
-# if __name__ == "__main__":
-#     unittest.main(verbosity=2)

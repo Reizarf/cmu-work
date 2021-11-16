@@ -10,5 +10,3 @@ def characters(numofCharacters):
     return x
 
 print(characters(numofCharacters))
-
-
