@@ -12,16 +12,19 @@
 #include <string.h>
 #include <algorithm>
 #include <bits/stdc++.h>
-// #include "cardwork.h"
+#include "cardwork.h"
 //#include "cardwork.cpp"
 
 using namespace std;
-
+vector<int> cards(52);
 
 int main()
 {
+    
 
-    fillDeck();//to fill the deck full of cards
+    fillDeck(cards);//to fill the deck full of cards
+    shuffleDeck(cards);
+    getCardName(cards);
 
     // shuffleDeck();
     

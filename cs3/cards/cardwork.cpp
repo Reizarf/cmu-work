@@ -5,36 +5,73 @@
 #include <bits/stdc++.h>
 #include <random>
 #include "cardwork.h"
-//#include "main.cpp"
 
 using namespace std;
+//int *a = new int[55];
+// vector<int> cards(52);
 
-vector<int> fillDeck(cards(52))
+
+vector<int> fillDeck(vector<int>&cards)
 {
-    vector<int> cards(52);
+    // vector<int> cards(52);
     for(int i = 0; i < 52;i++)
     {
         cards[i] = i;
-        cout << cards[i];
+        cout << cards[i] << endl;
     }
     return cards;
 }
 
-vector<int> shuffleDeck(cards(52))
+vector<int> shuffleDeck(vector<int>&cards)
 {
-    //dre rng(rd());
-    int size = cards.size();
-
-    for(int i = 0; i < size-1; i++)
+    random_shuffle(cards.begin(),cards.end());
+    cout << "Shuffled: "<<endl;
+    for(int i = 0; i < 52;i++)
     {
-        int j = i + rand() % (size-i)
-        swap(cards[i],cards[j]);
-        cout << cards[i];
+        // cards[i] = i;
+        cout << cards[i]<<endl;
     }
     
-    // shuffle(cards.begin(),card.end(),dre);
-    // //need ending parameter
-    // printVectorElements(cards);//stl print function?
+    return cards;
+}
 
+vector<int> getCardName(vector<int>&cards)
+{
+    int suit, rank, flag = 1;
+    // for(int cardNo = 0; cardNo < cards.size(); cardNo++)
+    // {
+    //     cards[cardNo] = cardNo;
+    //     cout << "cardNo: " << cardNo<<endl;
+    //     for(int i = 0; i < cardNo;i++)
+    //     {
+    //         suit = cardNo/13;
+
+    //     }
+    // }
+
+    // cout << cards.at(0);
+    // cout << cards[2];
+    
+    cout << "cards[0] = "<<cards[0];
+
+    suit = cards[0]/13;
+    rank = cards[0]%13;
+    cout << "suit: " << suit <<endl;
+    cout << "rank: " << rank << endl;
+
+    
+
+
+
+    
+    switch(rank)
+    {
+        case 0: //a two
+            cout << "made it!:"<<endl;
+        case 4:
+            cout << "This is a 4 card: " <<endl;
+    } 
+
+    
     return cards;
 }

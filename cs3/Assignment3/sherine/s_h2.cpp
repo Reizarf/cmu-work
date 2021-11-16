@@ -12,7 +12,7 @@ int main()
     int table[126];
 
     char t[100]{'\0'},p[25];
-
+ 
     int n,i,k,j,m,flag=0;
 
     cout << "Enter the text you'd like to search through: " <<endl;

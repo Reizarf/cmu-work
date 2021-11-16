@@ -1,5 +1,6 @@
+#include <vector>
+using namespace std;
 
-
-// vector<int> fillDeck(cards(52));
-// vector<int> shuffleDeck(cards(52));
-
+vector<int> fillDeck(vector<int>& cards);
+vector<int> shuffleDeck(vector<int>& cards);
+vector<int> getCardName(vector<int>&cards);
