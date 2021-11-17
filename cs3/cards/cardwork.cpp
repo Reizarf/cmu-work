@@ -10,19 +10,40 @@ using namespace std;
 //int *a = new int[55];
 // vector<int> cards(52);
 
-void TwoDFill(vector<vector<int>> &vec)
-{
-    for(int i = 0; i < 52; i++)
-    {
-        vec[i][0] = i;
-        for(int j = 0; j < 4; j++)
-        {
-            vec[i][0] = i;
-            cout << vec[i][0]<<" "<<vec[i][j] << endl;
-        }   
-    }  
-    //the 2nd part of the array is going past 4
+// void TwoDFill(vector<vector<int>> &vec)
+// {
+//     for(int i = 0; i < 52; i++)
+//     {
+//         vec[i][0] = i;
+//         for(int j = 0; j < 4; j++)
+//         {
+//             vec[i][0] = i;
+//             cout << vec[i][0]<<" "<<vec[i][j] << endl;
+//         }   
+//     }  
+//     //the 2nd part of the array is going past 4
     
+// }
+char suitCheck(vector<int>&cards)
+{   
+    // string answerString;
+    char answerChar[20];
+
+    int suit = 0;
+    for(int i = 0; i < 52; i ++)
+    {
+        suit = cards[0]/13;
+
+        // suit = suit/13;
+        switch(suit)
+        {
+            case 0:
+                strcpy(answerChar,"This will be a spade or:");
+                break;
+                
+        }
+    }
+    return *answerChar;
 }
 
 vector<int> fillDeck(vector<int>&cards)
@@ -49,21 +70,18 @@ vector<int> shuffleDeck(vector<int>&cards)
     return cards;
 }
 
-vector<int> getCardName(vector<int>&cards)
+string getCardRank(vector<int>&cards)
 {
+    string rankAnswer;
+
     int suit, rank, flag = 1;
     
     cout << "cards[0] = "<<cards[0];
 
-    suit = cards[0]/13;
+    // suit = cards[0]/13;
     rank = cards[0]%13;
-    cout << "suit: " << suit <<endl;
+    // cout << "suit: " << suit <<endl;
     cout << "rank: " << rank << endl;
-
-    
-
-
-
     
     switch(rank)
     {
@@ -83,7 +101,8 @@ vector<int> getCardName(vector<int>&cards)
             cout << "This is a Five of ";
             break;
         case 4:
-            cout << "This is a Six of ";
+            //cout << "This is a Six of ";
+            rankAnswer = "Six";
             break;
         case 5:
             cout << "This is a Seven of ";
@@ -113,23 +132,35 @@ vector<int> getCardName(vector<int>&cards)
             break;
              
     }
+    
+    
+    return rankAnswer;
+}
+string getCardSuit(vector<int>&cards)
+{
+    string suitAnswer;
+    int suit = cards[0]%13;
+    cout <<"suit = "<<suit;
     switch(suit)
     {
-        case 0:
+        case 1:
             cout << "Spade"<<endl;
+            suitAnswer = "Spade";
             break;
-        case 1://clubs
-            cout << "Clubs"<<endl;
+        case 2://clubs
+            // cout << "Clubs"<<endl;
+            suitAnswer = "Clubs";
             break;
-        case 2://diamond
-            cout << "Diamonds"<<endl;
+        case 3://diamond
+            // cout << "Diamonds"<<endl;
+            suitAnswer = "Diamonds";
             break;
-        case 3://hearts
-            cout <<"Hearts"<<endl;
+        case 4://hearts
+            // cout <<"Hearts"<<endl;
+            suitAnswer = "Hearts";
+            break;
     }
-
-    
-    return cards;
+    return suitAnswer;
 }
 
 void TwoDCardName(vector<vector<int>> &vec)
