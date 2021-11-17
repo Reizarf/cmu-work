@@ -42,10 +42,11 @@ int main()
         << "C - Guess face and suit"<<endl;
     
     string userInput;
-    cin >> userInput;
+    //cin >> userInput;
 
     while(userInput!="Q")
-    {
+    {  
+        cin >> userInput;
         if(userInput == "A")
         {
             cout<<"Your guess for face value: "<<
@@ -54,6 +55,7 @@ int main()
             if(userRankGuess == getCardRank(cards))
             {
                 cout << "You guessed correctly!"<<endl;
+                continue;
             }
             else
             {
@@ -68,13 +70,30 @@ int main()
             if(userSuitGuess == getCardSuit(cards))
             {
                 cout << "You guessed correctly!"<<endl;
+                continue;
             }
             else
                 cout <<"You guessed incorrectly";
         }
         if(userInput == "C")
         {
-
+            cout << "Your guess for the suit and value:"<<
+            endl<<"ex:{Spade},{Clubs},{Diamonds},{Hearts}... Press Enter";
+            cin >> userSuitGuess;
+            cout << "Now Enter your Guess for the value: "<<
+            endl<<"ex:{One},{Two},{Three},{Six}";
+            cin >> userRankGuess;
+            if(userRankGuess == getCardRank(cards) && userSuitGuess == getCardSuit(cards))
+            {
+                cout << "You guessed correctly!";
+                continue;
+            }
+            else
+            {
+                cout << "You guessed incorrectly";
+            }
+                
+                
         }
     }
     cout << "You entered: "<<userInput<<endl;

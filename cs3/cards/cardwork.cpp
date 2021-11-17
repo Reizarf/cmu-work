@@ -7,23 +7,7 @@
 #include "cardwork.h"
 
 using namespace std;
-//int *a = new int[55];
-// vector<int> cards(52);
 
-// void TwoDFill(vector<vector<int>> &vec)
-// {
-//     for(int i = 0; i < 52; i++)
-//     {
-//         vec[i][0] = i;
-//         for(int j = 0; j < 4; j++)
-//         {
-//             vec[i][0] = i;
-//             cout << vec[i][0]<<" "<<vec[i][j] << endl;
-//         }   
-//     }  
-//     //the 2nd part of the array is going past 4
-    
-// }
 char suitCheck(vector<int>&cards)
 {   
     // string answerString;
@@ -52,7 +36,7 @@ vector<int> fillDeck(vector<int>&cards)
     for(int i = 0; i < 52;i++)
     {
         cards[i] = i;
-        cout << cards[i] << endl;
+        //cout << cards[i] << endl;
     }
     return cards;
 }
@@ -60,12 +44,12 @@ vector<int> fillDeck(vector<int>&cards)
 vector<int> shuffleDeck(vector<int>&cards)
 {
     random_shuffle(cards.begin(),cards.end());
-    cout << "Shuffled: "<<endl;
-    for(int i = 0; i < 52;i++)
-    {
-        // cards[i] = i;
-        cout << cards[i]<<endl;
-    }
+    //cout << "Shuffled: "<<endl;
+    // for(int i = 0; i < 52;i++)
+    // {
+    //     // cards[i] = i;
+    //     cout << cards[i]<<endl;
+    // }
     
     return cards;
 }
@@ -76,12 +60,12 @@ string getCardRank(vector<int>&cards)
 
     int suit, rank, flag = 1;
     
-    cout << "cards[0] = "<<cards[0];
+    //cout << "cards[0] = "<<cards[0];
 
     // suit = cards[0]/13;
     rank = cards[0]%13;
     // cout << "suit: " << suit <<endl;
-    cout << "rank: " << rank << endl;
+    //cout << "rank: " << rank << endl;
     
     switch(rank)
     {
@@ -140,7 +124,7 @@ string getCardSuit(vector<int>&cards)
 {
     string suitAnswer;
     int suit = cards[0]%13;
-    cout <<"suit = "<<suit;
+    //cout <<"suit = "<<suit;
     switch(suit)
     {
         case 1:
