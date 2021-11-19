@@ -10,7 +10,8 @@
 #include <string>
 #include "myStack.h"
 #include "infixToPostfix.h"
-  
+#include <stack>
+
 using namespace std; 
  
 
@@ -25,6 +26,9 @@ string infixToPostfix::getPfx()
 
 void infixToPostfix::convertToPostfix()
 {
+    //convert his stuff to a normal stack
+    //stack<char> stackTest(50);//me
+
     stackType<char>  stack(50);//to be replaced by STL objects
     int i;
     char stackOpr;
@@ -34,6 +38,8 @@ void infixToPostfix::convertToPostfix()
     pfx = "";
 
     int len = infx.length();
+    
+    //int len1 = stackTest.length();
 
     for (i = 0; i < len; i++)
         if (infx[i] >= 'A' && infx[i] <= 'Z')

@@ -33,6 +33,7 @@ public:
       //               otherwise returns false.
 
     virtual bool isFullStack() const = 0;
+
       //Function to determine whether the stack is full.
       //Postcondition: Returns true if the stack is full,
       //               otherwise returns false.
@@ -74,6 +75,10 @@ public:
       //Precondition: The stack exists and is not empty.
       //Postcondition: The stack is changed and the top 
       //               element is removed from the stack.
+      while(isEmptyStack() == true)
+      {
+        
+      }
 };
         
 #endif
