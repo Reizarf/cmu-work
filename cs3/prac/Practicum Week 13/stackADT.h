@@ -15,10 +15,19 @@ class stackADT
 {
 public:
     virtual void initializeStack() = 0;
+       stack<char> testStack = NULL;
+       
        //Method to initialize the stack to an empty state.
        //Postcondition: Stack is empty
 
     virtual bool isEmptyStack() const = 0;
+      while (!testStack.empty())
+      {
+        return true;
+      }
+      else 
+        return false;
+      
       //Function to determine whether the stack is empty.
       //Postcondition: Returns true if the stack is empty,
       //               otherwise returns false.
@@ -29,12 +38,31 @@ public:
       //               otherwise returns false.
 
     virtual void push(const Type& newItem) = 0;
+      if(isEmptyStack() == false)//and !full
+      {
+        return;
+      }
+      else
+      {
+        testStack.pop(newItem);
+      }
+      
       //Function to add newItem to the stack.
       //Precondition: The stack exists and is not full.
       //Postcondition: The stack is changed and newItem 
       //               is added to the top of the stack.
 
     virtual Type top() const = 0;
+      while(!testStack.empty())//and !full
+      {
+        testStack.top();
+      }
+      else
+      {
+        cout << "There's nothing on the top"<<endl;
+        return 0;
+      }
+      
       //Function to return the top element of the stack.
       //Precondition: The stack exists and is not empty.
       //Postcondition: If the stack is empty, the program 
