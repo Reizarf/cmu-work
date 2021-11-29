@@ -1,6 +1,6 @@
 import random, itertools
-#generate deck
-deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
+# #generate deck
+# deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
 
 cardNum = ("two","three","four","five","six","seven","eight","nine","ten",
 "jack","queen","king")
@@ -11,9 +11,8 @@ suit = ("diamonds","hearts","clubs","spades")
 def randomFaceValue(cardNum):#generate random face
     randomFace = random.choice(cardNum)
     print("Random card is: ",randomFace)
-    print("Enter your guess: (ex)'six','seven'.")
+    print("Enter your guess: (ex) 'six','seven','king','jack' etc.")
     x = input()
-    print("x",x)
     while(True):
         if(x == randomFace):
             print("You guessed correctly!")
@@ -27,9 +26,9 @@ def randomFaceValue(cardNum):#generate random face
 def randomSuitValue(suit):
     randomSuit = random.choice(suit)
     print("Random suit is: ",randomSuit)
-    print("Enter your guess: ")
+    print("Enter your guess: (ex) 'spades','clubs','hearts','diamonds'.")
     x = input()
-    print("you entered: ",x)
+    
     while(True):
         if(x == randomSuit):
             print("You guessed correctly!")
@@ -41,22 +40,10 @@ def randomSuitValue(suit):
     return randomSuit
 
 def randomBOTH(cardNum,suit):
-    random_card = randomFaceValue,randomSuitValue
+    random_card = randomFaceValue(cardNum),randomSuitValue(suit)
     
-    print("Option C:",random_card)
-    return
-
-# def guessCardNum(randomFace):
-#     print("randomFaceValue:",randomFace)
-#     guess = str(input("Enter your guess: (ex)'six','seven'."))
-#     print("Your guess was: ",guess)
-#     if(guess == cardNum):
-#         print("You were correct!")
-        
-#     else:
-#         print("Guess again")
-        
-
+    # print("Option C:",random_card)
+    return   
 
 def menu():
     print('''
@@ -70,27 +57,29 @@ def menu():
     selection = input()
 
     print(selection)
-    while(selection != 'Q'):
-        if(selection == 'a' or 'A'):
+    while(selection != 'q'):
+        if(selection == 'a' or selection == 'A'):
             randomFaceValue(cardNum)#random card number
             print("Guessing face value")
             #guessCardNum()
-
-            break
+            menu()
+            break#play with continue
             #function call
-        if(selection == 'b'):#not going into here for some reason
+        elif(selection == 'b' or selection == 'B'):#not going into here for some reason
             print("here")
-            randomSuitValue(suit)#random suit value
             print("You chose to guess the suit value")
+            randomSuitValue(suit)#random suit value
+            
             #function call
-
+            menu()
             break
-        if(selection == 'c' or 'C'):
+        elif(selection == 'c' or selection == 'C'):
             #function call
-            randomBOTH(cardNum,suit)
             print("Guess the face first then the suit")
-
+            randomBOTH(cardNum,suit)
+            
+            menu()
             break
-        break
-
+       
+#randomSuitValue(suit)
 menu()
