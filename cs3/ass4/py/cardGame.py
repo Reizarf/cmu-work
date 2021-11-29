@@ -15,6 +15,7 @@ def randomFaceValue(cardNum):#generate random face
 
 def randomSuitValue(suit):
     randomSuit = random.choice(suit)
+    print("Random suit: ",randomSuit)
     return randomSuit
 
 def randomBOTH(cardNum,suit):
