@@ -1,6 +1,19 @@
+
+# I declare that all material in this assessment task is
+# my work except where there is clear acknowledgement
+# or reference to the work of others. I further declared
+# that I have complied to the CMU Academic Integrity
+# policy at the University Website. 
+# https://coloradomesa.edu/student-services/documents
+# Authors Name:       Sullivan Frazier
+# UID(700#:)          700-479463
+# Date:               1 December 2021
+
+# Submissions that do not include the above academic 
+# integrity statement will not be considered.
+
+
 import random, itertools
-# #generate deck
-# deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
 
 cardNum = ("two","three","four","five","six","seven","eight","nine","ten",
 "jack","queen","king")
@@ -10,7 +23,7 @@ suit = ("diamonds","hearts","clubs","spades")
 
 def randomFaceValue(cardNum):#generate random face
     randomFace = random.choice(cardNum)
-    print("Random card is: ",randomFace)
+    #print("Random card is: ",randomFace)
     print("Enter your guess: (ex) 'six','seven','king','jack' etc.")
     x = input()
     while(True):
@@ -25,7 +38,7 @@ def randomFaceValue(cardNum):#generate random face
 
 def randomSuitValue(suit):
     randomSuit = random.choice(suit)
-    print("Random suit is: ",randomSuit)
+    #print("Random suit is: ",randomSuit)
     print("Enter your guess: (ex) 'spades','clubs','hearts','diamonds'.")
     x = input()
     
@@ -66,7 +79,6 @@ def menu():
             break#play with continue
             #function call
         elif(selection == 'b' or selection == 'B'):#not going into here for some reason
-            print("here")
             print("You chose to guess the suit value")
             randomSuitValue(suit)#random suit value
             
