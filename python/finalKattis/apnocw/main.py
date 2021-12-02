@@ -17,6 +17,7 @@ def aPrize(b):
             if c + items[i+1] > x:
                 print(i+1)
                 break
+    return b
 
 if __name__ == "__main__":
-    aPrize()
+    aPrize(b)
