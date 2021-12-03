@@ -1,0 +1,194 @@
+%// I declare that all material in this assessment task is my work except 
+% where there is clear acknowledgement or reference to the work of others. 
+% I further declare that I have complied and agreed to the CMU Academic
+% Integrity Policy at the University website.
+% http://www.coloradomesa.edu/student-services/documents
+% Author’s Name: Sullivan Frazier
+% UID(700#): 700479463
+% Date: 12/01/2021
+% Submissions that do not include the above academic integrity statements
+% will not be considered.
+
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Assignment 4}
+\author{Sullivan Frazier}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+
+\maketitle
+
+
+\section {Question 1}
+	
+	The classic sequential search looks for a given pattern, and once it is found it is stopped. While on the other hand, the non-classic search returns the number of occurrences of a key/pattern within a given text. This has a time efficiency of O(m log n) due to the algorithm needing to repeatedly evaluate the text at different positions throughout. The classic search has a time efficiency of O(nm) due to it only reading through the text until the search pattern is found. 
+
+\section {Question 2 - Part A}
+	
+	There is a chance you will select two gloves of the same color. Best Case:2
+	
+	Worst case implies the selection of wrong gloves every draw until there is no option but a solution. Although we cannot see the gloves, we can tell which one is left handed versus right handed. The worst case entails pulling 5 left-handed red gloves, 4 left-handed yellow gloves, and 2 left-handed pairs of green gloves. Then your next draw would be a matching pair. So the worst case means you would have  5+4+2+1=12 total draws from the drawer.
+
+\section {Question 2 - Part B}
+		Best case versus worst case. There is a 3:1 ratio, the odds of the missing socks being from two different pairs are high. In retrospect, the odds of the socks that are missing and matching are low. The number of pairs of socks on average would be three due to it's probability leaning towards the missing socks being mismatching.
+		
+\section {Question 3}
+\begin{algorithmic}
+	\State In order to split the pattern like requested - 
+\For{i = 0; i < n;++i}
+	\For{j = 0; j < n*2-1;++j}
+	\State $Left = disk[j]//set left$
+	\State $Right = disk[j+1]//set right$
+	\If{Left != Right}
+		\State $disk[j] = Right$
+		\State $disk[j+1] = Left$
+		\State $++count$
+	\EndIf
+\EndFor
+\EndFor
+\end{algorithmic}
+
+
+\section {Question 4}
+
+	Brute force is unfortunately rather lengthy and inefficient. The time efficiency is O(m*n) due to it having to compare each letter of the pattern, with each letter of the text. So if the length of the text is 47, and the pattern is 6 letters, (47*6)=282 comparisons.
+
+\section {Question 5}
+
+	The first move will be the two boys taking the boat to the other side, one boy stays on the island and the other returns with the boat. Then a soldier comes across and stays with the first boy. These four trips designate the amount of total trips required while also meeting the problems requirements. The one on the boat ferries across the n amount of soldiers, allowing for 4n trips to be made.
+
+\section {Question 6}
+
+	An efficient manner in my opinion, is to clean up and/or sort the given data, and then compare. This includes removing punctuation, spaces, commas, and other sorts of characters. Once you have the two strings cleaned up and sorted, just compare the values of the letters. 
+	Or the prime number trick (come back and look at this)
+
+
+\section {Question 7}
+
+	Ideally, and in most (theoretically all) situations, horspool will always make LESS comparisons than brute force, due to it’s shift table attribute. This allows for an increase of efficiency all around. This algorithm skips comparisons that are “known” to be mismatches, preventing wasted computational power and time.
+
+\section {Question 8}
+	
+	If horspool finds a matching substring, the shift would be determined by the shift table. If the entirety of the pattern matches in a portion of the text, the shift will be the size of the pattern. 
+
+\section {Question 9 - Part A}
+%come back here
+\begin {center}
+\begin {tabular}{||c c||}
+	\hline
+	Input & Hash(mod 11) \\
+	\hline\hline
+	30 & 8 \\ 
+	\hline
+	20 & 9\\ 
+	\hline
+	56 &  1\\
+	\hline
+	75 & 9\\
+	\hline
+	31 & 9 \\
+	\hline
+	19 & 8 \\
+	\hline
+\end {tabular}
+\end {center}
+
+
+\section {Question 9 - Part B}
+	
+	Having the load factor further away from 1, implies an inefficiency in the table (wasted space), while on the other hand having it too long would mean longer lists. If the load factor is close to 1, the hash table is fully optimized, making it possible to find a key with a cost of 1-2 comparisons.
+
+\section {Question 9 - Part C}
+	
+	The efficiency of operations such as insertion and deletion are identical to that of searching, on average they are O(1) if the number of keys is about equivalent to the hash table’s size.
+
+\section {Question 10}
+\begin{algorithm}
+\caption{greedyAssignment(A[n][n])}\label{alg:cap} 
+\begin{algorithmic}
+
+%\Require $Input: cost matrix (person and job assignments)$
+\State $selected[n]$
+\For{$i=0; i<n; i++$}
+	\State $selected[i] = 0$
+\EndFor
+\State $assignments[n]$
+\For{$i=0; i<n; i++$}
+	\State $assignments[i] = -1$
+\EndFor
+\For{$i=1; i<n; i++$}
+  \State $minCost = INTMAX, selectedJob = -1$
+  \For{$j=1; j<n; j++$}
+  \If {$A[i][j]<minCost and selected[j]==0$}
+    \State $selected[j]=j$
+    \State $minCost=A[i][j]$
+  \EndIf
+  \State $selected[selectedJob[j]]=1$
+  \State $assignments[i]=selectedJob$
+  \EndFor
+\EndFor
+\State $return assignments$
+
+This algorithm does not yield an optimal solution, although there is a chance it may. This is only a feasible solution to get you in the ballpark of what is optimal.
+
+\end{algorithmic}
+\end{algorithm}
+
+
+\end{document}
