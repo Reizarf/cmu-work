@@ -1,4 +1,3 @@
-
 S = input()
 P = input()
 
