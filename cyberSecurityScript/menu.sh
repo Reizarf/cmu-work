@@ -7,10 +7,10 @@ systemMaitenance() {
     echo "-Updating System-"
     echo "-----------------"
     #work
-    sudo apt-get update &
-    sudo apt-get upgrade &
+    sudo apt-get update &#update
+    sudo apt-get upgrade &#upgrade
     
-    sudo apt-get autoremove -yy
+    sudo apt-get autoremove -yy #cleaning
     sudo apt-get autoclean
     
     finish
@@ -22,14 +22,16 @@ versionCheck(){
     cat /etc/os-release
 }
 
-filesAndFolders(){
-    if [ -d "$@"]; then
-        echo "Files found: $(find "$direc" -type f | wc -l)"
-        echo "Folders found: $(find "$direc" -type d | wc -l)"
-    else
-        echo "[ERROR]"
-        # exit 1
-    fi
+online(){
+    # if [ -d "$@"]; then
+    #     echo "Files found: $(find "$direc" -type f | wc -l)"
+    #     echo "Folders found: $(find "$direc" -type d | wc -l)"
+    # else
+    #     echo "[ERROR]"
+    #     # exit 1
+    # fi
+    uptime
+
 }
 
 checkDate(){
@@ -38,8 +40,6 @@ checkDate(){
     #work
     date
     echo "--------------------------"
-    
-    
 }
 
 systemDiskSpace() {
@@ -47,12 +47,16 @@ systemDiskSpace() {
     df -h
 }
 
+ipInfo() {
+    ifconfig
+}
+
 
 while [[ true ]]; do
     echo "
     1.) Update & Clean the system
     2.) Check the system's version
-    3.) Count files and folders in given directory
+    3.) Show system UpTime
     4.) Check system's date config
     5.) Evaluate space at /home/
     6.) Check system's IP connection
@@ -68,7 +72,7 @@ while [[ true ]]; do
             versionCheck
         fi
         if [[ $REPLY == 3 ]]; then
-            filesAndFolders
+            online
             #this isn't working as planned
         fi
         if [[ $REPLY == 4 ]]; then
@@ -78,16 +82,15 @@ while [[ true ]]; do
             # check space at home function
             systemDiskSpace
         fi
-        
-
+        if [[ $REPLY == 6 ]]; then
+            #ifconfig
+            ipInfo
+        fi
     else
         echo "Try another entry"
-    
-    
     fi
     read -p "Enter to continue: "
     clear
-    
 done
 
 
