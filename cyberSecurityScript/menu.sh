@@ -23,15 +23,7 @@ versionCheck(){
 }
 
 online(){
-    # if [ -d "$@"]; then
-    #     echo "Files found: $(find "$direc" -type f | wc -l)"
-    #     echo "Folders found: $(find "$direc" -type d | wc -l)"
-    # else
-    #     echo "[ERROR]"
-    #     # exit 1
-    # fi
     uptime
-
 }
 
 checkDate(){
@@ -92,7 +84,3 @@ while [[ true ]]; do
     read -p "Enter to continue: "
     clear
 done
-
-
-
-
