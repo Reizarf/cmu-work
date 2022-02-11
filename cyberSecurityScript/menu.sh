@@ -43,6 +43,10 @@ ipInfo() {
     ifconfig
 }
 
+hostname() {
+    hostnamectl
+}
+
 
 while [[ true ]]; do
     echo "
@@ -52,11 +56,12 @@ while [[ true ]]; do
     4.) Check system's date config
     5.) Evaluate space at /home/
     6.) Check system's IP connection
+    7.) Check Hostname/Kernel version
     "
-    read -p "Enter Selection [0-6]: "
+    read -p "Enter Selection [0-7]: "
     clear
 
-    if [[ $REPLY =~ ^[0-6]$ ]]; then
+    if [[ $REPLY =~ ^[0-7]$ ]]; then
         if [[ $REPLY == 1 ]]; then
             systemMaitenance
         fi
@@ -77,6 +82,9 @@ while [[ true ]]; do
         if [[ $REPLY == 6 ]]; then
             #ifconfig
             ipInfo
+        fi
+        if [[ $REPLY == 7 ]]; then
+            hostname
         fi
     else
         echo "Try another entry"
