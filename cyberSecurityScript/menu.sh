@@ -86,6 +86,7 @@ while [[ true ]]; do
         if [[ $REPLY == 7 ]]; then
             hostname
         fi
+        
     else
         echo "Try another entry"
     fi

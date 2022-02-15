@@ -8,4 +8,3 @@ if [$name]; then
 else
     echo "I didn't hear a whole lot"
 fi
-
