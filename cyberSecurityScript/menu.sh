@@ -23,15 +23,7 @@ versionCheck(){
 }
 
 online(){
-    # if [ -d "$@"]; then
-    #     echo "Files found: $(find "$direc" -type f | wc -l)"
-    #     echo "Folders found: $(find "$direc" -type d | wc -l)"
-    # else
-    #     echo "[ERROR]"
-    #     # exit 1
-    # fi
     uptime
-
 }
 
 checkDate(){
@@ -51,6 +43,10 @@ ipInfo() {
     ifconfig
 }
 
+hostname() {
+    hostnamectl
+}
+
 
 while [[ true ]]; do
     echo "
@@ -60,11 +56,12 @@ while [[ true ]]; do
     4.) Check system's date config
     5.) Evaluate space at /home/
     6.) Check system's IP connection
+    7.) Check Hostname/Kernel version
     "
-    read -p "Enter Selection [0-6]: "
+    read -p "Enter Selection [0-7]: "
     clear
 
-    if [[ $REPLY =~ ^[0-6]$ ]]; then
+    if [[ $REPLY =~ ^[0-7]$ ]]; then
         if [[ $REPLY == 1 ]]; then
             systemMaitenance
         fi
@@ -86,13 +83,13 @@ while [[ true ]]; do
             #ifconfig
             ipInfo
         fi
+        if [[ $REPLY == 7 ]]; then
+            hostname
+        fi
+        
     else
         echo "Try another entry"
     fi
     read -p "Enter to continue: "
     clear
 done
-
-
-
-
