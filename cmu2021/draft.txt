@@ -1,0 +1,32 @@
+Hello Everyone!!!
+
+Hope everyone is doing well - the first few weeks of the semester are ALWAYS crazy.
+
+Last meeting we:
+ - Installed VirtualBox
+ - Got a Ubuntu/Kali VM running
+ - Used SSH to get into the OverTheWire game, Bandit
+ - Started using commands in a terminal to migrate and open files
+
+This upcoming meeting we are looking to:
+ - Get back into OverTheWire
+ - Familarize ourselves more with commands
+ - Chat about upcoming events
+
+EVENTS:
+ - Virtual CTF event
+        -Rocky Mountain Cyberspace Symposium
+        -https://lnkd.in/gx6x6VMR
+        -Feb 23 for university students
+        -Virtual AND in-person
+
+ - Hubs Hack The Port
+        -Maritime Control Systems CyberSecurity Con 2022
+        -Onsite and virtual opportunites
+        -Onsite: Fort Lauderdale, FL
+        -5 onsite and 5 offsite
+        -Teams will receive access to a cyber exercise playbook
+        -All paid(?)
+
+Excited to see you all again Wednesday @ 5pm in Confluence 310!
+Have a good week!
