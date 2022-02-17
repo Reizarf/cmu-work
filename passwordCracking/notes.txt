@@ -1,3 +1,4 @@
+https://infosecscout.com/how-to-brute-force-a-password/
 https://www.4armed.com/blog/hashcat-crack-md5-hashes/
 
 echo -n "Password1" | md5sum | tr -d " -" >> hashes
@@ -9,6 +10,8 @@ echo -n "GuessMe3" | md5sum | tr -d " -" >> hashes
 echo -n "S3CuReP455Word" | md5sum | tr -d " -" >> hashes
 echo -n "HighlyUnlik3lyToB3Cr4ck3d…" | md5sum | tr -d " -" >> hashes
 
+echo -n "HighlyUnlik3lyToB3Cr4ck3d…" | sha256sum | tr -d " -" >> hash256.hash 
+
 should look like this:
 2ac9cb7dc02b3c0083eb70898e549b63
 eb61eead90e3b899c6bcbe27ac581660
@@ -19,4 +22,8 @@ eb61eead90e3b899c6bcbe27ac581660
 b5af0b804ff7238bce48adef1e0c213f
 5a53193b4cca4ccdabf3ccb1fa514162
 
-hashcat –m 0 hashes /usr/share/wordlists/rockyou.txt
+
+# hashcat -a 3 -m 0 -w 4 *FILE* --force 
+-a is attack mode = brute force
+-m is algorithm = md5
+-w is workload = 4 is nightmare
