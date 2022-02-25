@@ -57,6 +57,8 @@ while [[ true ]]; do
     5.) Evaluate space at /home/
     6.) Check system's IP connection
     7.) Check Hostname/Kernel version
+
+    0.) Exit
     "
     read -p "Enter Selection [0-7]: "
     clear
@@ -85,6 +87,9 @@ while [[ true ]]; do
         fi
         if [[ $REPLY == 7 ]]; then
             hostname
+        fi
+        if [[ $REPLY == 0 ]]; then
+            exit
         fi
         
     else
