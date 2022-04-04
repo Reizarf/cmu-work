@@ -54,10 +54,11 @@ void bad()
   printf("buffer is at %p\n", buffer);
   cout << "Give me some text: ";
   fflush(stdout);
-  fgets(buffer, BUFSIZE, stdin); // similar to C's gets();
+  fgets(buffer, BUFSIZE, stdin);
   //gets(buffer); // depricated
   cout << "Acknowledged: " << buffer << " with length " << strlen(buffer) << endl;
 }
+
 int main(int argc, char *argv[])
 {
   gid_t gid = getegid();
