@@ -54,8 +54,9 @@ void bad()
   printf("buffer is at %p\n", buffer);
   cout << "Give me some text: ";
   fflush(stdout);
-  mgets(buffer); // similar to C's gets();
+  //mgets(buffer); // similar to C's gets();
   //gets(buffer); // depricated
+  fgets(buffer, BUFSIZE, stdin);
   cout << "Acknowledged: " << buffer << " with length " << strlen(buffer) << endl;
 }
 
