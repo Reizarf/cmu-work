@@ -1,18 +1,30 @@
 #!/usr/bin/bash
-set -x
-(( random_number = $RANDOM20 + 1 ))
+#set -x
 
+rando=$(( $RANDOM % 20 ))
+
+#echo "rando: $rando"
 function checkNumber() {
-    if [[ $random_number -eq $1 ]]
+    if [[ $rando -eq $guess ]]
     then
-        echo "You gyessed the number in $guesses guesses!"
+        echo "You guessed the number in $guesses guesses!"
+        exit 0
     else
+        if [[ $guess -lt $rando ]]
+        then
+            echo "Your guess is too low"
+            #echo "guess: "$guess
+        else
+            echo "Your guess is too high"
+            #echo "guess: "$guess
+        fi
         echo "Try again!"
         (( guesses = $guesses + 1 ))
     fi
 }
 while [[ 1 ]]
 do
-    read -p "Enter a number between 1 and 20: " $guesses
-    check_number $guesses
+    #echo "Enter a number between 1 and 20: "
+    read guess
+    checkNumber p $guesses
 done
