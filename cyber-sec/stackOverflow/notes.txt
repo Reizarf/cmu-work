@@ -1,0 +1,4 @@
+find offset from stack to return address
+
+can insert exterior code or move return address to run other functions
+

