@@ -1,0 +1,29 @@
+32 Bit Stack Frame
+
+		void fun(int x,void *data) {
+		   int q,w,e;
+		}
+		
+		struct D{
+		  int a,b,c;
+		};
+		
+		D mystruct; // 0x1234
+		
+		fun(10,&mystruct);
+		// should return to this line of code 0x7890		
+		
+			10 pushed onto the stack
+			address of mystruct pushed onto the stack
+			return
+			
+			10 		int
+			0x1234  void *
+			0x7890  RA
+			q
+			w
+			e
+			
+			12(%esp) should get us 10
+			8(%esp) should get us 0x1234 memory of struct
+			4(%esp) should get us the return address
