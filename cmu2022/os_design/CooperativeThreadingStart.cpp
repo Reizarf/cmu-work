@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unistd.h>
+// #include <ios_base.h>
 
 using namespace std;
 
@@ -22,7 +23,11 @@ void saveState(ThreadState *t){
   asm("mov %rdi,32(%rdi)");
 }
 void restoreState(ThreadState *t){
+<<<<<<< HEAD
   asm("restore: ");
+=======
+  // restore:
+>>>>>>> daee8b7abf377695fc1a293eeafc0c94814488f9
   asm("mov 0(%rdi),%rax");
   asm("mov 8(%rdi),%rbx");
   asm("mov 16(%rdi),%rcx");
@@ -36,7 +41,7 @@ int current=0;
 
 void setStackandRun(unsigned long * stack, ThreadFun *fun){
   asm("mov %rsp,%rdi");
-  fun(current);
+  fun(*stack);
 }
 unsigned long * stacks[3];
 //in class^
@@ -46,7 +51,7 @@ void startThread(ThreadFun &f) {
   // saveState(t);
   // restoreState(t);
   const int maxStack = 64000;
-  stacks[current+1]=(unsigned long *)malloc(sizeof(unsigned long)* maxStack);//allocate stack
+  stacks[current+1]=(unsigned long *)malloc(sizeof(unsigned long)* maxStack) + (sizeof(unsigned long) * maxStack);//allocate stack
   current++;
   
   setStackandRun((stacks[current+1]),f);
@@ -57,6 +62,7 @@ void startThread(ThreadFun &f) {
 }
 void yield(int threadNum) {
 	// Implement random
+<<<<<<< HEAD
   int randomThread=rand()%3;//I used the random numbers
 	ThreadState t;
 	saveState(&(threads[randomThread]));
@@ -68,6 +74,20 @@ void yield(int threadNum) {
 	saveState(&(threads[randomThread]));
 	restoreState(&t);
 	cout << hex <<"threads[randomThread].rbx: "<<threads[randomThread].rbx << endl;
+=======
+  int randThread=rand()%3;
+  randThread = threadNum;
+	ThreadState t;
+	saveState(&(threads[threadNum]));
+	//restoreState(&t);
+	cout << hex <<threads[0].rdi << endl; //double check if it's rdi vs r something else
+	saveState(&(threads[1]));
+	//restoreState(&t);
+	cout << hex <<threads[1].rax << endl; 
+	saveState(&(threads[2]));
+	//restoreState(&t);
+	cout << hex <<threads[2].rbx << endl;
+>>>>>>> daee8b7abf377695fc1a293eeafc0c94814488f9
 }
 
 /* Change nothing below this line.  Get the program to execute the code

@@ -1,0 +1,25 @@
+CooperativeThreadingStart.cpp: In function ‘void saveState(ThreadState*)’:
+CooperativeThreadingStart.cpp:17:29: error: unused parameter ‘t’ [-Werror=unused-parameter]
+   17 | void saveState(ThreadState *t){
+      |                ~~~~~~~~~~~~~^
+CooperativeThreadingStart.cpp: In function ‘void restoreState(ThreadState*)’:
+CooperativeThreadingStart.cpp:25:32: error: unused parameter ‘t’ [-Werror=unused-parameter]
+   25 | void restoreState(ThreadState *t){
+      |                   ~~~~~~~~~~~~~^
+CooperativeThreadingStart.cpp: In function ‘void startThread(void (&)(int))’:
+CooperativeThreadingStart.cpp:59:40: error: the compiler can assume that the address of ‘f’ will never be NULL [-Werror=address]
+   59 |   cout << hex << ((long) &f) << ' ' << f<< endl;
+      |                                        ^
+CooperativeThreadingStart.cpp:59:40: error: the compiler can assume that the address of ‘f’ will never be NULL [-Werror=address]
+CooperativeThreadingStart.cpp: In function ‘void yield(int)’:
+CooperativeThreadingStart.cpp:64:7: error: variable ‘randThread’ set but not used [-Werror=unused-but-set-variable]
+   64 |   int randThread=rand()%3;
+      |       ^~~~~~~~~~
+CooperativeThreadingStart.cpp:66:14: error: unused variable ‘t’ [-Werror=unused-variable]
+   66 |  ThreadState t;
+      |              ^
+CooperativeThreadingStart.cpp: In function ‘void startThread(void (&)(int))’:
+CooperativeThreadingStart.cpp:59:40: error: nonnull argument ‘f’ compared to NULL [-Werror=nonnull-compare]
+   59 |   cout << hex << ((long) &f) << ' ' << f<< endl;
+      |                                        ^
+cc1plus: all warnings being treated as errors
