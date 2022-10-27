@@ -1,0 +1,182 @@
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 0
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 1
+Main 1 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 2
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 3
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 4
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 5
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 6
+Main 1 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 7
+Main 1 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 8
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 9
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 0
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 1
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 2
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 3
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 4
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 5
+Main 1 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 6
+Main 1 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 7
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 8
+Main 1 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 9
+55bf9953f4eb 1
+
+
+Back to Main
+
+
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 0
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 1
+Main 2 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 2
+Main 2 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 3
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 4
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 5
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 6
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 7
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 8
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 9
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 0
+Main 2 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 1
+Main 2 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 2
+Main 2 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 3
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+i: 4
+Main 2 says Hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+i: 5
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 6
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 7
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 8
+Main 2 says Hello
+threads[randomThread].rdi: 55bf99542220
+threads[randomThread].rbx: 7f311f288616
+i: 9
+55bf9953f58b 1
+Main 0 says hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+Main 0 says hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+Main 0 says hello
+threads[randomThread].rdi: 55bf995421e0
+threads[randomThread].rbx: 7f311f288616
+Main 0 says hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616
+Main 0 says hello
+threads[randomThread].rdi: 55bf99542260
+threads[randomThread].rbx: 7f311f288616

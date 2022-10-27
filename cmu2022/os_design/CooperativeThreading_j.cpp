@@ -8,10 +8,10 @@ typedef void ThreadFun(int threadNum);
 const int maxThreads = 3;
 struct ThreadState {
   uint64_t rax,rbx,rcx,rdx,rdi,rsi,rbp,r8;
-  //8 bytes off of each other
-  //rdx linux, rcx windows(?)
-  //try compiling with -S flag
 };
+class registers{
+  
+}
 ThreadState threads[maxThreads];
 
 void saveState(ThreadState *t){
@@ -20,19 +20,20 @@ void saveState(ThreadState *t){
   asm("mov %rbx,8(%rdi)");
   asm("mov %rcx,16(%rdi)");
   asm("mov %rdx,24(%rdi)");
-  asm("mov %rdi,32(%rdi)");
+  asm("mov %rsi,32(%rdi)");
+  asm("mov %rbp, 40(%rdi)");
+  asm("mov %r8, 48(%rdi)");
 }
 void restoreState(ThreadState *t){
-<<<<<<< HEAD
   asm("restore: ");
-=======
-  // restore:
->>>>>>> daee8b7abf377695fc1a293eeafc0c94814488f9
-  asm("mov 0(%rdi),%rax");
-  asm("mov 8(%rdi),%rbx");
-  asm("mov 16(%rdi),%rcx");
+  asm("mov 48(%rdi),%r8");
+  asm("mov 40(%rdi),%rbp");
+  asm("mov 32(%rdi),%rsi");
   asm("mov 24(%rdi),%rdx");
-  asm("mov 32(%rdi),%rdi");
+  asm("mov 16(%rdi),%rcx");
+  asm("mov 8(%rdi),%rbx");
+  asm("mov 0(%rdi),%rax");
+  
 }
 
 
@@ -40,16 +41,12 @@ void restoreState(ThreadState *t){
 int current=0;
 
 void setStackandRun(unsigned long * stack, ThreadFun *fun){
-  asm("mov %rsp,%rdi");
+  asm("mov %rdi,%rsp");
   fun(*stack);
 }
 unsigned long * stacks[3];
 //in class^
-void startThread(ThreadFun &f) {
-  //ThreadState t;
-  // startThread(t);
-  // saveState(t);
-  // restoreState(t);
+void startThread(ThreadState *f) {
   const int maxStack = 64000;
   stacks[current+1]=(unsigned long *)malloc(sizeof(unsigned long)* maxStack) + (sizeof(unsigned long) * maxStack);//allocate stack
   current++;
@@ -60,35 +57,38 @@ void startThread(ThreadFun &f) {
   cout << hex << ((long) &f) << ' ' << f<< endl;
   saveState(&(threads[1]));
 }
+
 void yield(int threadNum) {
-	// Implement random
-<<<<<<< HEAD
-  int randomThread=rand()%3;//I used the random numbers
-	ThreadState t;
-	saveState(&(threads[randomThread]));
-	restoreState(&t);
-	cout << hex <<"threads[randomThread].rdi: "<<threads[randomThread].rdi << endl; //double check if it's rdi vs r something else
-	saveState(&(threads[randomThread]));
-	restoreState(&t);
-	//cout << hex <<"threads[randomThread].rax: "<<threads[randomThread].rax << endl; 
-	saveState(&(threads[randomThread]));
-	restoreState(&t);
-	cout << hex <<"threads[randomThread].rbx: "<<threads[randomThread].rbx << endl;
-=======
-  int randThread=rand()%3;
-  randThread = threadNum;
-	ThreadState t;
-	saveState(&(threads[threadNum]));
-	//restoreState(&t);
-	cout << hex <<threads[0].rdi << endl; //double check if it's rdi vs r something else
-	saveState(&(threads[1]));
-	//restoreState(&t);
-	cout << hex <<threads[1].rax << endl; 
-	saveState(&(threads[2]));
-	//restoreState(&t);
-	cout << hex <<threads[2].rbx << endl;
->>>>>>> daee8b7abf377695fc1a293eeafc0c94814488f9
+  restoreState(&threads[threadNum]);
+  threadNum = rand()%maxThreads;
+  startThread(&threads[threadNum]);
 }
+
+	// // Implement random
+  // int randomThread=rand()%3;//I used the random numbers
+	// ThreadState t;
+	// saveState(&(threads[randomThread]));
+	// restoreState(&t);
+	// cout << hex <<"threads[randomThread].rdi: "<<threads[randomThread].rdi << endl; //double check if it's rdi vs r something else
+	// saveState(&(threads[randomThread]));
+	// restoreState(&t);
+	// //cout << hex <<"threads[randomThread].rax: "<<threads[randomThread].rax << endl; 
+	// saveState(&(threads[randomThread]));
+	// restoreState(&t);
+	// cout << hex <<"threads[randomThread].rbx: "<<threads[randomThread].rbx << endl;
+  // int randThread=rand()%3;
+  // randThread = threadNum;
+	// //ThreadState t;
+	// saveState(&(threads[threadNum]));
+	// //restoreState(&t);
+	// cout << hex <<threads[0].rdi << endl; //double check if it's rdi vs r something else
+	// saveState(&(threads[1]));
+	// //restoreState(&t);
+	// cout << hex <<threads[1].rax << endl; 
+	// saveState(&(threads[2]));
+	// //restoreState(&t);
+	// cout << hex <<threads[2].rbx << endl;
+
 
 /* Change nothing below this line.  Get the program to execute the code
  * of main, main1, and main2
