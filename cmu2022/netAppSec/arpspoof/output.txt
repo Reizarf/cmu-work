@@ -1,0 +1,25 @@
+#https://www.thepythoncode.com/article/building-arp-spoofer-using-scapy
+Starting default sniff - CTRL+C to stop
+Ether / IP / TCP 54.191.210.155:https > 192.168.209.130:33468 PA / Raw
+Ether / IP / TCP 192.168.209.130:33468 > 54.191.210.155:https A
+Ether / IP / TCP 192.168.209.130:33468 > 54.191.210.155:https PA / Raw
+Ether / IP / TCP 54.191.210.155:https > 192.168.209.130:33468 A / Padding
+Ether / IP / TCP 192.168.209.130:37416 > 34.107.221.82:http A
+Ether / IP / TCP 34.107.221.82:http > 192.168.209.130:37416 A / Padding
+Ether / IP / TCP 192.168.209.130:37722 > 35.161.134.0:https A
+Ether / IP / TCP 192.168.209.130:44012 > 72.21.91.29:http A
+Ether / IP / TCP 35.161.134.0:https > 192.168.209.130:37722 A / Padding
+Ether / IP / TCP 72.21.91.29:http > 192.168.209.130:44012 A / Padding
+Ether / IP / TCP 192.168.209.130:37416 > 34.107.221.82:http A
+Ether / IP / TCP 34.107.221.82:http > 192.168.209.130:37416 A / Padding
+Ether / IP / TCP 35.161.134.0:https > 192.168.209.130:37722 PA / Raw
+Ether / IP / TCP 192.168.209.130:37722 > 35.161.134.0:https A
+Ether / IP / TCP 192.168.209.130:37722 > 35.161.134.0:https PA / Raw
+Ether / IP / TCP 192.168.209.130:37722 > 35.161.134.0:https FA
+Ether / IP / TCP 35.161.134.0:https > 192.168.209.130:37722 A / Padding
+Ether / IP / TCP 35.161.134.0:https > 192.168.209.130:37722 A / Padding
+Ether / IP / TCP 35.161.134.0:https > 192.168.209.130:37722 FPA / Padding
+Ether / IP / TCP 192.168.209.130:37722 > 35.161.134.0:https A
+Ether / IP / TCP 192.168.209.130:44012 > 72.21.91.29:http A
+Ether / IP / TCP 72.21.91.29:http > 192.168.209.130:44012 A / Padding
+[!] KeyboardInterrupt: Sniff stopped
